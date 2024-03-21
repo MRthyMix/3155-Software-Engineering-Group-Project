@@ -9,9 +9,9 @@ def index():
 
 # This is the change I made
 
-@app.route("/landing/")
+@app.route("/home/")
 def home():
-  return render_template("landing.html")
+  return render_template("home.html")
 
 
 if __name__ == '__main__':
