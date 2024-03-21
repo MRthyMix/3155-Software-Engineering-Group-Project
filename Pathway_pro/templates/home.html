@@ -2,7 +2,8 @@
 
 {% block head %}
 <title>Home-Page</title>
-<link rel="stylesheet" href="/Pathway_pro/static/css/home.css">
+<!-- Home Style-->
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
 {% endblock %}
 
 {% block body %}
@@ -15,7 +16,8 @@
           <a href="#">Become a Member</a>
         </div>
         <div class="imgBox">
-          <img src="/Pathway_pro/images/student.png" alt="student">
+          <!-- Student Image-->
+          <img src="{{url_for('static', filename='/images/student.png')}}" alt="student"/>
         </div>
       </div>
     </section>

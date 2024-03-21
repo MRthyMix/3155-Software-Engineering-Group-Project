@@ -29,7 +29,7 @@ section{
     
 }
 
-/* Style the text */
+/* Style the texts */
 .content .textbox {
     position: relative;
     max-width: 600px;
@@ -53,7 +53,7 @@ section{
     text-decoration: none;
 }
 
-/* Ensure the image is right centered */
+/* Image*/
 .content .imgBox {
     display: block;
     margin: 0 auto;
