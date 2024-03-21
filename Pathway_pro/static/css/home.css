@@ -1,0 +1,60 @@
+/* home.css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@100..900&family=Noto+Sans+Siddham&display=swap');
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans Lao Looped', sans-serif; /* Used the imported font */
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    background: #F6F6FF;
+    transition: 0.5s;
+}
+
+.content {
+    position: relative;
+    width: 100%;
+    margin-left: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+/* Style the text */
+.content .textbox {
+    position: relative;
+    max-width: 600px;
+}
+
+.content .textbox h2{
+    color: black;
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 900;
+}
+
+.content .textbox a{
+    display: inline-block;
+    margin-top: 20px;
+    padding: 20px;
+    background:rgb(46, 45, 45);
+    color:white;
+    border-radius: 10px;
+    letter-spacing: 1px;
+    text-decoration: none;
+}
+
+/* Ensure the image is right centered */
+.content .imgBox {
+    display: block;
+    margin: 0 auto;
+}

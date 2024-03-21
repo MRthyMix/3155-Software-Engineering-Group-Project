@@ -2,14 +2,23 @@
 
 {% block head %}
 <title>Home-Page</title>
+<link rel="stylesheet" href="/Pathway_pro/static/css/home.css">
 {% endblock %}
 
 {% block body %}
     <!-- Home Position -->
-  <div>
-      <h2>Welcome to Pathway Pro</h2>
-      <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
-      <img src="Pathway_pro\images\student.png">
-  </div>
+    <section>
+      <div class="content">
+        <div class="textbox">
+          <h2>Welcome to Pathway Pro</h2>
+          <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
+          <a href="#">Become a Member</a>
+        </div>
+        <div class="imgBox">
+          <img src="/Pathway_pro/images/student.png" alt="student">
+        </div>
+      </div>
+    </section>
+  
 
 {% endblock %}
