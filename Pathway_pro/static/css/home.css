@@ -17,22 +17,24 @@ section{
     display: flex;
     justify-content: space-between;
     background: #F6F6FF;
-    transition: 0.5s;
+    
 }
 
 .content {
     position: relative;
     width: 100%;
-    margin-left: flex;
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-left: 170px;
     
 }
 
-/* Style the texts */
+/* Style the texts and Button (a)*/
 .content .textbox {
     position: relative;
-    max-width: 600px;
+    max-width: 800px;
+    margin-bottom: 50px; 
 }
 
 .content .textbox h2{
@@ -55,6 +57,7 @@ section{
 
 /* Image*/
 .content .imgBox {
-    display: block;
-    margin: 0 auto;
+    width: 100%;
+    margin-top: -100px; 
+    padding-left: 280px;
 }
