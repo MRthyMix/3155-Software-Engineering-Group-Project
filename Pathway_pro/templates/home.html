@@ -1,26 +1,84 @@
 {% extends 'home_base.html' %}
 
 {% block head %}
+<!-- Home Title-->
 <title>Home-Page</title>
 <!-- Home Style-->
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
 {% endblock %}
 
 {% block body %}
-    <!-- Home Position -->
-    <section>
+    <!-- Hero Position -->
+  <section class="hero">
       <div class="content">
           <div class="textbox">
-            <h2>Welcome to Pathway Pro</h2>
-            <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
-            <a href="#">Become a Member</a>
+              <h2>Welcome to Pathway Pro</h2>
+              <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
+              <a href="#" class="btn">Become a Member</a>
           </div>
           <!-- Student Image-->
           <div class="imgBox">
-            <img src="{{url_for('static', filename='/images/student.png')}}" alt="student"/>
+              <img src="{{url_for('static', filename='/images/student.png')}}" alt="student">
           </div>
       </div>
+  </section>
+    
+    <!-- Features Position -->
+    <section id="features">
+      <div class="container">
+        <h2 class="section-title">Our Features</h2>
+        <div class="feature-container">
+          <div class="feature">
+            <div class="feature-img">
+              <img src="placeholder-image.jpg" alt="Feature Image">
+            </div>
+            <div class="feature-text">
+              <h3>Feature Title 1</h3>
+              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+            </div>
+          </div>
+          <!-- Repeat this feature block for each feature -->
+          <div class="feature">
+            <div class="feature-img">
+              <img src="placeholder-image.jpg" alt="Feature Image">
+            </div>
+            <div class="feature-text">
+              <h3>Feature Title 2</h3>
+              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+            </div>
+          </div>
+          <!-- Repeat for other features -->
+        </div>
+      </div>
     </section>
-  
+
+  <!-- About position -->
+<section id="about">
+  <div class="container">
+      <h2>About Us</h2>
+      <p>Brief description of your company and its mission.</p>
+  </div>
+</section>
+
+<!-- Our Community position -->
+<section id="community">
+  <div class="container">
+      <h2>Our Community</h2>
+      <p>Description of your community and its benefits.</p>
+  </div>
+</section>
+
+<!-- Contact Us postion -->
+<section id="contact">
+  <div class="container">
+      <h2>Contact Us</h2>
+      <form>
+          <input type="text" placeholder="Name">
+          <input type="email" placeholder="Email">
+          <textarea placeholder="Message"></textarea>
+          <button type="submit">Send</button>
+      </form>
+  </div>
+</section>
 
 {% endblock %}

@@ -1,23 +1,21 @@
 /* home.css */
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Lao+Looped:wght@100..900&family=Noto+Sans+Siddham&display=swap');
 
-*
-{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans Lao Looped', sans-serif; /* Used the imported font */
 }
 
-section{
+section {
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    padding: 100px;
+    min-height: 90vh; /* Adjusted vertical height */
+    padding: 50px; /* Reduced vertical padding */
     display: flex;
     justify-content: space-between;
     background: #F6F6FF;
-    
 }
 
 .content {
@@ -27,37 +25,100 @@ section{
     justify-content: space-between;
     align-items: center;
     margin-left: 170px;
-    
 }
 
-/* Style the texts and Button (a)*/
+/* Style the texts and Button (a) */
 .content .textbox {
     position: relative;
     max-width: 800px;
-    margin-bottom: 50px; 
+    margin-bottom: 50px;
+    text-align: left; /* Align text to the left */
 }
 
-.content .textbox h2{
+.content .textbox h2 {
     color: black;
     font-size: 4em;
     line-height: 1.5em;
     font-weight: 900;
 }
 
-.content .textbox a{
+.content .textbox a {
     display: inline-block;
     margin-top: 20px;
     padding: 20px;
-    background:rgb(46, 45, 45);
-    color:white;
+    background: rgb(46, 45, 45);
+    color: white;
     border-radius: 10px;
     letter-spacing: 1px;
     text-decoration: none;
+    transition: background-color 0.3s ease; /* Added transition for hover effect */
 }
 
-/* Image*/
+.content .textbox a:hover {
+    background-color: #333; /* Change background color on hover */
+}
+
+/* Image */
 .content .imgBox {
     width: 100%;
-    margin-top: -100px; 
+    margin-top: -100px;
     padding-left: 280px;
 }
+
+/* CSS for Features Section */
+
+#features {
+    background-color: #fff; /* White background */
+    padding: 100px 0; /* Add padding top and bottom */
+  }
+  
+  .container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center container */
+    text-align: center; /* Center text */
+  }
+  
+  .section-title {
+    font-size: 2.5em; /* Large font size */
+    margin-bottom: 50px; /* Spacing below title */
+  }
+  
+  .feature-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Center feature blocks */
+  }
+  
+  .feature {
+    width: 45%; /* Set width of feature block */
+    margin: 20px; /* Add margin around feature blocks */
+    background-color: #f9f9f9; /* Light gray background */
+    border-radius: 20px; /* Add rounded corners */
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    overflow: hidden; /* Hide overflow */
+  }
+  
+  .feature-img {
+    width: 100%; /* Set width of image */
+    overflow: hidden; /* Hide overflow */
+    border-top-left-radius: 20px; /* Round top left corner */
+    border-top-right-radius: 20px; /* Round top right corner */
+  }
+  
+  .feature-img img {
+    width: 100%; /* Make image fill container */
+  }
+  
+  .feature-text {
+    padding: 20px; /* Add padding around text */
+  }
+  
+  .feature-text h3 {
+    font-size: 1.5em; /* Medium font size */
+    margin-bottom: 10px; /* Spacing below title */
+  }
+  
+  .feature-text p {
+    font-size: 1em; /* Small font size */
+    color: #666; /* Dark gray text color */
+  }
