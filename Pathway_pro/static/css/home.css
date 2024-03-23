@@ -11,13 +11,14 @@
 section {
     position: relative;
     width: 100%;
-    min-height: 90vh; /* Adjusted vertical height */
-    padding: 50px; /* Reduced vertical padding */
+    min-height: 90vh; 
+    padding: 50px; 
     display: flex;
     justify-content: space-between;
     background: #F6F6FF;
 }
 
+/* CSS for Hero Section */
 .content {
     position: relative;
     width: 100%;
@@ -27,7 +28,6 @@ section {
     margin-left: 170px;
 }
 
-/* Style the texts and Button (a) */
 .content .textbox {
     position: relative;
     max-width: 800px;
