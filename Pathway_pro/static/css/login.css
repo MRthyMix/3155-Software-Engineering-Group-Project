@@ -1,58 +1,91 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-color: black; /* Set overall background color to black */
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Set full height */
 }
 
-.container {
-    background-color: #fff;
-    padding: 40px;
-    border-radius: 8px;
+.login-signup-container {
+    width: 350px; /* Adjust width of container */
+    padding: 20px;
+    background-color: white; /* Set background color of login/signup container to white */
+    border-radius: 12px; /* Make container edges rounder */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 320px;
-    text-align: center;
+}
+
+.tabs {
+    display: flex;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    font-size: 16px;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease-in-out;
+    border-radius: 12px; /* Make tab buttons rounder */
+}
+
+.tab-btn.active {
+    border-bottom: 2px solid #007bff;
+}
+
+.tab-content {
+    display: none;
+    padding: 20px 0;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.active-tab {
+    display: block;
+    opacity: 1;
 }
 
 h2 {
     margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
 }
 
 input[type="text"],
 input[type="password"],
+input[type="email"],
 input[type="submit"] {
     width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 12px; /* Make input boxes and buttons rounder */
     box-sizing: border-box;
+    font-size: 16px;
+    transition: border-color 0.3s ease-in-out;
 }
 
 input[type="submit"] {
-    background-color: #4caf50;
+    background-color: #007bff;
     color: #fff;
     cursor: pointer;
+    border: none;
 }
 
 input[type="submit"]:hover {
-    background-color: #45a049;
+    background-color: #0056b3;
 }
 
-.switch-form {
-    margin-top: 15px;
-    font-size: 14px;
-}
-
-.switch-form a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-.switch-form a:hover {
-    text-decoration: underline;
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus {
+    border-color: #007bff;
+    outline: none;
 }
