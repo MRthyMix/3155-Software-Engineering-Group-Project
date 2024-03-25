@@ -17,9 +17,14 @@ def signUp():
 
 # This is the change I made
 
-@app.route("/home/")
-def home():
+@app.route("/", defaults={'path': '/home/'})
+@app.route("/<path:path>")
+def catch_all(path):
     return render_template("home.html")
+
+# @app.route("/home/")
+# def home():
+#     return render_template("home.html")
 
 @app.route("/userHomePage")
 def userHomePage():
