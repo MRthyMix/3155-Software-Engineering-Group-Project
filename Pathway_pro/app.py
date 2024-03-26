@@ -1,17 +1,22 @@
-from flask import Flask, redirect, url_for, render_template
+from flask import Flask, render_template, url_for, request, redirect
 
 app = Flask(__name__)
 
 
-@app.route('/login')
+@app.route('/login', methods=['POST', 'GET'])
 def login():
-    # return 'Hello from app.py!'
-    return render_template("login_screen.html")
+    if request.method == 'GET':
+        return render_template("login_screen.html")
+    else:
+        username = request.form['username']
+        password = request.form['password']
+        return render_template("userHomePage.html")
+        
 
-@app.route('/signUp')
+@app.route('/signUp', methods=['POST'])
 def signUp():
-    # return 'Hello from app.py!'
-    return render_template("login_screen.html")
+    fullname = request.form['fullname']
+    return render_template("userHomePage.html", name=fullname)
 
 
 
@@ -26,10 +31,12 @@ def signUp():
 def home():
     return render_template("home.html")
 
-@app.route("/userHomePage")
+@app.route("/userHomePage", methods=['POST'])
 def userHomePage():
     # route for the user homepage once user logs in
-    pass
+    # pass
+    username = request.form['username']
+    return render_template("userHomePage.html")
 
 
 if __name__ == '__main__':
