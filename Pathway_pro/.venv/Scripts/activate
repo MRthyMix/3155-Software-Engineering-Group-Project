@@ -38,7 +38,7 @@ deactivate () {
 # unset irrelevant variables
 deactivate nondestructive
 
-VIRTUAL_ENV="C:\Users\david\OneDrive\Documents\UNCC 2024 Spring\test\3155-Software-Engineering-Group-Project\Pathway_pro\.venv"
+VIRTUAL_ENV="c:\Users\david\OneDrive\Documents\UNCC 2024 Spring\test\3155-Software-Engineering-Group-Project\Pathway_pro\.venv"
 export VIRTUAL_ENV
 
 _OLD_VIRTUAL_PATH="$PATH"

@@ -5,24 +5,39 @@
 <title>Home-Page</title>
 <!-- Home Style-->
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
-<link rel="stylesheet" href="/Pathway_pro/static/css/home.css">
+<link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+<!--JavaScript files -->
 {% endblock %}
 
 {% block body %}
-    <!-- Hero Position -->
+  <!-- Hero Position -->
   <section class="hero">
-      <div class="content">
-          <div class="textbox">
-              <h2>Welcome to Pathway Pro</h2>
-              <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
-              <a href="#" class="btn">Become a Member</a>
-          </div>
-          <!-- Student Image-->
-          <div class="imgBox">
-              <img src="{{url_for('static', filename='/images/student.png')}}" alt="student">
-          </div>
-      </div>
+    <div class="content">
+        <div class="textbox">
+            <h2>Welcome to Pathway Pro</h2>
+            <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
+            <div class="buttons-container">
+                <a href="#" class="btn">Become a Member</a>
+                <!-- Video button -->
+                <div class="video-button">
+                    <div class="video__image">
+                        <img src="{{url_for('static', filename='/images/PWP_icon.png')}}" alt="story">
+                        <span><i class="ri-play-circle-fill"></i></span>
+                    </div>
+                    <span>Watch Our story</span>
+                </div>
+            </div>
+        </div>
+        <!-- Student Image-->
+        <div class="imgBox">
+            <img src="{{url_for('static', filename='/images/student.png')}}" alt="student">
+        </div>
+    </div>
   </section>
+
     
     <!-- Features Position -->
     <section id="features">
@@ -32,61 +47,65 @@
           <!--f1-->
           <div class="feature">
             <div class="feature-img">
-              <img src="placeholder-image.jpg" alt="Feature Image">
+              <img src="{{url_for('static', filename='/gifs/checklist_icon.gif')}}" alt="checklist_icon">
             </div>
             <div class="feature-text">
-              <h3>Feature Title 1</h3>
-              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+              <h3>Checklist</h3>
+              <p>Stay organized with a handy checklist to guide you through essential steps in your career journey, from resume building to interview preparation.</p>
             </div>
           </div>
           <!-- f2 -->
           <div class="feature">
             <div class="feature-img">
-              <img src="placeholder-image.jpg" alt="Feature Image">
+              <img src="{{url_for('static', filename='/gifs/modular_struct.gif')}}" alt="modular_struct">
             </div>
             <div class="feature-text">
-              <h3>Feature Title 2</h3>
-              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+              <h3>Modular Structure</h3>
+              <p>Easily navigate through different sections like resume workshops 
+                and LinkedIn profile creation, each divided into manageable modules for focused learning.</p>
             </div>
           </div>
           <!-- f3 -->
           <div class="feature">
             <div class="feature-img">
-              <img src="placeholder-image.jpg" alt="Feature Image">
+              <img src="{{url_for('static', filename='/gifs/learn_icon.gif')}}" alt="modular_struct">
             </div>
             <div class="feature-text">
-              <h3>Feature Title 3</h3>
-              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+              <h3>Interactive Learning</h3>
+              <p> Engage with interactive activities, links, and multimedia resources 
+                such as images and videos, providing visual examples to enhance understanding.  </p>
             </div>
           </div>
           <!--f4-->
           <div class="feature">
             <div class="feature-img">
-              <img src="placeholder-image.jpg" alt="Feature Image">
+              <img src="{{url_for('static', filename='/gifs/progress_goal.gif')}}" alt="track-goal">
             </div>
             <div class="feature-text">
-              <h3>Feature Title 4</h3>
-              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+              <h3>Progress Tracking & Goal Setting</h3>
+              <p>Monitor your progress with a visual progress bar and 
+                set achievable goals to keep you motivated.</p>
             </div>
           </div>
           <!--f5-->
           <div class="feature">
             <div class="feature-img">
-              <img src="placeholder-image.jpg" alt="Feature Image">
+              <img src="{{url_for('static', filename='/gifs/community_icon.gif')}}" alt="community">
             </div>
             <div class="feature-text">
-              <h3>Feature Title 5</h3>
-              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+              <h3>Community Support</h3>
+              <p>Connect with a supportive community of fellow learners who are on the same journey.  </p>
             </div>
           </div>
           <!--f6-->
           <div class="feature">
             <div class="feature-img">
-              <img src="placeholder-image.jpg" alt="Feature Image">
+              <img src="{{url_for('static', filename='/gifs/access.gif')}}" alt="Access">
             </div>
             <div class="feature-text">
-              <h3>Feature Title 6</h3>
-              <p>Feature Description goes here. This feature helps users in some specific way.</p>
+              <h3>Immediate Access</h3>
+              <p> Access all content from the start, allowing you to 
+                learn at your own pace and focus on areas of interest or priority.</p>
             </div>
           </div>
           <!--endf-->
@@ -105,10 +124,18 @@
 <!-- Our Community position -->
 <section id="community">
   <div class="container">
-      <h2>Our Community</h2>
-      <p>Description of your community and its benefits.</p>
+    <h2>Our Community</h2>
+    <div class="slideshow">
+      <img src="{{ url_for('static', filename='/images/f_word.jpg') }}" alt="Community Image 1">
+      <img src="{{ url_for('static', filename='/images/first_reply.jpg') }}" alt="Community Image 2">
+      <img src="{{ url_for('static', filename='/images/pass_away.jpg') }}" alt="Community Image 3">
+      <img src="{{ url_for('static', filename='/images/ohoh.jpg') }}" alt="Community Image 4">
+      
+      <!-- Add more images as needed -->
+    </div>
   </div>
 </section>
+
 
 <!-- Contact Us postion -->
 <section id="contact">
@@ -120,6 +147,31 @@
           <textarea placeholder="Message"></textarea>
           <button type="submit">Send</button>
       </form>
+  </div>
+</section>
+
+<!-- FAQ position -->
+<section id="FAQ">
+  <div class="container">
+    <div class="faq-header">
+      <h2>Frequently Asked Questions</h2>
+    </div>
+    <div class="faq-content">
+      <div class="faq-question">
+        <h3 class="question">Question 1</h3>
+        <div class="answer">
+          <p>Answer 1 goes here.</p>
+        </div>
+      </div>
+      <!-- Repeat this for each question -->
+      <div class="faq-question">
+        <h3 class="question">Question 2</h3>
+        <div class="answer">
+          <p>Answer 2 goes here.</p>
+        </div>
+      </div>
+      <!-- Repeat for other questions -->
+    </div>
   </div>
 </section>
 

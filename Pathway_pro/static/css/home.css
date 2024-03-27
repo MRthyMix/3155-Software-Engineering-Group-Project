@@ -58,6 +58,55 @@ section {
     background-color: #333; /* Change background color on hover */
 }
 
+.content .textbox .buttons-container {
+    display: flex;
+    align-items: center;
+}
+
+.content .textbox .buttons-container .btn {
+    margin-right: 20px; /* Adjust spacing between buttons */
+}
+
+/* Adjust styles for video button */
+.video-button {
+    display: flex;
+    align-items: center;
+    margin-top: 20px; /* Adjust spacing between buttons and text */
+}
+
+.video-button .video__image {
+    position: relative;
+}
+
+.video-button .video__image img {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-button .video__image span {
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+}
+
+.video-button .video__image span i {
+    padding: 0;
+    font-size: 1rem;
+    color: #046A38;
+    background-color: var(--extra-light);
+    border-radius: 50%;
+    box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+}
+
+.video-button > span {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
 /* Image */
 .content .imgBox {
     width: 100%;
@@ -68,57 +117,140 @@ section {
 /* CSS for Features Section */
 
 #features {
-    background-color: #fff; /* White background */
-    padding: 100px 0; /* Add padding top and bottom */
-  }
-  
-  .container {
-    max-width: 1200px; /* Limit content width */
-    margin: 0 auto; /* Center container */
-    text-align: center; /* Center text */
-  }
-  
-  .section-title {
-    font-size: 2.5em; /* Large font size */
-    margin-bottom: 50px; /* Spacing below title */
-  }
-  
-  .feature-container {
+    background-color: #fff; 
+    padding: 100px 0; 
+}
+
+.container {
+    max-width: 1200px; 
+    margin: 0 auto; 
+    text-align: center; 
+}
+
+.section-title {
+    font-size: 2.5em; 
+    margin-bottom: 50px; 
+}
+
+.feature-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center; /* Center feature blocks */
-  }
-  
-  .feature {
-    width: 45%; /* Set width of feature block */
-    margin: 20px; /* Add margin around feature blocks */
-    background-color: #f9f9f9; /* Light gray background */
-    border-radius: 20px; /* Add rounded corners */
-    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); /* Add shadow effect */
-    overflow: hidden; /* Hide overflow */
-  }
-  
-  .feature-img {
-    width: 100%; /* Set width of image */
-    overflow: hidden; /* Hide overflow */
-    border-top-left-radius: 20px; /* Round top left corner */
-    border-top-right-radius: 20px; /* Round top right corner */
-  }
-  
-  .feature-img img {
-    width: 100%; /* Make image fill container */
-  }
-  
-  .feature-text {
-    padding: 20px; /* Add padding around text */
-  }
-  
-  .feature-text h3 {
-    font-size: 1.5em; /* Medium font size */
-    margin-bottom: 10px; /* Spacing below title */
-  }
-  
-  .feature-text p {
+    justify-content: center; 
+}
+
+.feature {
+    width: 45%; 
+    margin: 20px; 
+    background-color: #f9f9f9; 
+    border-radius: 20px; 
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1); 
+    overflow: hidden; 
+}
+
+.feature-img {
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+}
+
+.feature-img img {
+    width: 100%; 
+}
+
+.feature-text {
+    padding: 20px; 
+}
+
+.feature-text h3 {
+    font-size: 1.5em; 
+    margin-bottom: 10px; 
+}
+
+.feature-text p {
     font-size: 1em; /* Small font size */
     color: #666; /* Dark gray text color */
-  }
+}
+
+/* CSS for Community Section */
+#community {
+  background-color: #fff; /* White background */
+  padding: 100px 0; /* Add padding top and bottom */
+}
+
+.container {
+  max-width: 1200px; /* Limit content width */
+  margin: 0 auto; /* Center container */
+  text-align: center; /* Center text */
+}
+
+#community h2 {
+  font-size: 2.5em; /* Large font size */
+  margin-bottom: 30px; /* Spacing below title */
+}
+
+.slideshow {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: center; /* Center content horizontally */
+  flex-wrap: wrap; /* Allow content to wrap to next line if needed */
+}
+
+.slideshow img {
+  max-width: 410px; /* Set maximum width for images */
+  max-height: 500px; /* Set maximum height for images */
+  margin: 10px; /* Add margin around images for spacing */
+}
+
+
+
+
+/* CSS for FAQ Section */
+#FAQ {
+    background-color: #f6f6ff; 
+    padding: 100px 0; 
+}
+
+.faq-header {
+    width: 30%; 
+    padding-right: 50px;
+    float: left; 
+}
+
+.faq-content {
+    width: 70%; 
+    float: left; 
+}
+
+.faq-question {
+    margin-bottom: 30px; 
+}
+
+.question {
+    cursor: pointer; 
+    font-size: 1.2em;
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 10px; 
+}
+
+.answer {
+    display: none; /* Hide answer by default */
+}
+
+.answer p {
+    font-size: 1em; /* Small font size */
+    color: #666; /* Dark gray text color */
+}
+
+/* Add hover effect to question */
+.question:hover {
+    color: #555; /* Darken text color on hover */
+}
+
+/* Show answer when question is clicked */
+.question.active + .answer {
+    display: block; /* Show answer */
+}

@@ -19,7 +19,7 @@ def signUp():
     return render_template("userHomePage.html", name=fullname)
 
 
-@app.route("/home/")
+@app.route("/")
 def home():
     return render_template("home.html")
 
