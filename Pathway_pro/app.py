@@ -14,14 +14,6 @@ def signUp():
     return render_template("login_screen.html")
 
 
-
-# This is the change I made
-
-# @app.route("/", defaults={'path': '/home/'})
-# @app.route("/<path:path>")
-# def catch_all(path):
-#     return render_template("home.html")
-
 @app.route("/home/")
 def home():
     return render_template("home.html")
