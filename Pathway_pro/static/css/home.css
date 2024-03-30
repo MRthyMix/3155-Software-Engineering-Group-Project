@@ -11,8 +11,8 @@
 section {
     position: relative;
     width: 100%;
-    min-height: 90vh; 
-    padding: 50px; 
+    min-height: 80vh; 
+    padding: 0px; 
     display: flex;
     justify-content: space-between;
     background: #F6F6FF;
@@ -107,7 +107,7 @@ section {
     color: var(--text-dark);
 }
 
-/* Image */
+/* girl Image */
 .content .imgBox {
     width: 100%;
     margin-top: -100px;
@@ -181,48 +181,84 @@ section {
 
 
 
+/* CSS for About Us section */
+.about-content, .mission-content, .approach-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 10vh;
+    margin: 0 auto;
+}
+
+.about-text, .mission-text, .approach-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-text h1, .mission-text h1, .approach-text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.about-text p, .mission-text p, .approach-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.about-image, .mission-image, .approach-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image img, .mission-image img, .approach-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+
 /* CSS for Community Section */
 #community {
-  background-color: #fff; /* White background */
-  padding: 100px 0; /* Add padding top and bottom */
-}
-
-.container {
-  max-width: 1200px; /* Limit content width */
-  margin: 0 auto; /* Center container */
-  text-align: center; /* Center text */
-}
-
-#community h2 {
-  font-size: 2.5em; /* Large font size */
-  margin-bottom: 30px; /* Spacing below title */
-}
-
-.slideshow {
-  position: relative; /* Position relative for absolute positioning of images */
-  overflow: hidden; /* Hide overflowing images */
-}
-
-.slideshow img {
-  max-width: 410px; /* Set maximum width for images */
-  max-height: 500px; /* Set maximum height for images */
-  margin: 10px; /* Add margin around images for spacing */
-  /* position: absolute; Position images absolutely */
-  animation: slideRightToLeft 20s linear infinite; /* Animation settings */
-}
-
-@keyframes slideRightToLeft {
-  0% {
-    transform: translateX(100%); /* Initial position: move 100% from right */
+    background-color: #fff; /* White background */
+    padding: 100px 0; /* Add padding top and bottom */
   }
-  100% {
-    transform: translateX(-100%); /* Final position: move 100% to the left */
+  
+  .container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center container */
+    text-align: center; /* Center text */
   }
-}
-
-
-
-
+  
+  #community h2 {
+    font-size: 2.5em; /* Large font size */
+    margin-bottom: 30px; /* Spacing below title */
+  }
+  
+  .slideshow {
+    position: relative; /* Position relative for absolute positioning of images */
+    overflow: hidden; /* Hide overflowing images */
+  }
+  
+  .slideshow img {
+    max-width: 410px; /* Set maximum width for images */
+    max-height: 500px; /* Set maximum height for images */
+    margin: 10px; /* Add margin around images for spacing */
+    /* position: absolute; Position images absolutely */
+    animation: slideRightToLeft 20s linear infinite; /* Animation settings */
+  }
+  
+  @keyframes slideRightToLeft {
+    0% {
+      transform: translateX(100%); /* Initial position: move 100% from right */
+    }
+    100% {
+      transform: translateX(-100%); /* Final position: move 100% to the left */
+    }
+  }
+  
 
 /* CSS for FAQ Section */
 #FAQ {
@@ -271,3 +307,6 @@ section {
 .question.active + .answer {
     display: block; /* Show answer */
 }
+
+
+
