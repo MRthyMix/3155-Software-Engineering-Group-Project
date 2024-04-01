@@ -157,11 +157,16 @@
 <section id="community">
   <div class="container">
     <h2>Our Community</h2>
+    <h3>Trust their words, not just ours</h3>
     <div class="slideshow">
-      <img src="{{ url_for('static', filename='/images/f_word.jpg') }}" alt="Community Image 1">
-      <img src="{{ url_for('static', filename='/images/first_reply.jpg') }}" alt="Community Image 2">
-      <img src="{{ url_for('static', filename='/images/pass_away.jpg') }}" alt="Community Image 3">
-      <img src="{{ url_for('static', filename='/images/ohoh.jpg') }}" alt="Community Image 4">
+      <img src="{{ url_for('static', filename='/images/axel.png') }}" alt="Community Image 1">
+      <img src="{{ url_for('static', filename='/images/jay.png') }}" alt="Community Image 2">
+      <img src="{{ url_for('static', filename='/images/jess.png') }}" alt="Community Image 3">
+      <img src="{{ url_for('static', filename='/images/natalie.png') }}" alt="Community Image 4">
+      <img src="{{ url_for('static', filename='/images/mike.png') }}" alt="Community Image 5">
+      <img src="{{ url_for('static', filename='/images/sabba.png') }}" alt="Community Image 6">
+      <img src="{{ url_for('static', filename='/images/rich.png') }}" alt="Community Image 7">
+      <img src="{{ url_for('static', filename='/images/rob.png') }}" alt="Community Image 8">
       
     </div>
   </div>
@@ -169,43 +174,75 @@
 </section>
 
 
-<!-- Contact Us postion -->
+<!-- Contact Us and FAQ Section -->
 <section id="contact">
   <div class="container">
-      <h2>Contact Us</h2>
+    <div class="contact">
+      <h2>Just Ask. Get Answers</h2>
       <form>
           <input type="text" placeholder="Name">
           <input type="email" placeholder="Email">
           <textarea placeholder="Message"></textarea>
           <button type="submit">Send</button>
       </form>
+    </div>
+    <div class="faq">
+      <div class="faq-header">
+        <h1>Frequently Asked Questions</h1>
+      </div>
+      <div class="faq-content">
+        <div class="faq-question">
+          <h3 class="question">Can I use Pathway Pro if I'm not a student at UNCC?</h3>
+          <div class="answer">
+            <p>Answer 1 goes here.</p>
+          </div>
+        </div>
+        <!-- Repeat this for each question -->
+        <div class="faq-question">
+          <h3 class="question">Is Pathway Pro free to use, or are there any subscription fees?</h3>
+          <div class="answer">
+            <p>Answer 2 goes here.</p>
+          </div>
+        </div>
+        <!-- Repeat for other questions -->
+        <div class="faq-question">
+          <h3 class="question">Can I customize my checklist based on my specific career goals and interests?</h3>
+          <div class="answer">
+            <p>Answer 3 goes here.</p>
+          </div>
+        </div>
+        <!-- Repeat for other questions -->
+        <div class="faq-question">
+          <h3 class="question">Can I track my progress and update my checklist as I go?</h3>
+          <div class="answer">
+            <p>Answer 4 goes here.</p>
+          </div>
+        </div>
+        <!-- Repeat for other questions -->
+        <div class="faq-question">
+          <h3 class="question">How frequently is Pathway Pro updated with new features or content?</h3>
+          <div class="answer">
+            <p>Answer 5 goes here.</p>
+          </div>
+        </div>
+        <!-- Repeat for other questions -->
+        <div class="faq-question">
+          <h3 class="question">Can I access Pathway Pro on my mobile device?</h3>
+          <div class="answer">
+            <p>Answer 6 goes here.</p>
+          </div>
+        </div>
+        <!-- Repeat for other questions -->
+        <div class="faq-question">
+          <h3 class="question">How can I contact customer support if I encounter any issues or have further questions?</h3>
+          <div class="answer">
+            <p>Answer 7 goes here.</p>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
-
-<!-- FAQ position -->
-<section id="FAQ">
-  <div class="container">
-    <div class="faq-header">
-      <h2>Frequently Asked Questions</h2>
-    </div>
-    <div class="faq-content">
-      <div class="faq-question">
-        <h3 class="question">Question 1</h3>
-        <div class="answer">
-          <p>Answer 1 goes here.</p>
-        </div>
-      </div>
-      <!-- Repeat this for each question -->
-      <div class="faq-question">
-        <h3 class="question">Question 2</h3>
-        <div class="answer">
-          <p>Answer 2 goes here.</p>
-        </div>
-      </div>
-      <!-- Repeat for other questions -->
-    </div>
-  </div>
-</section>
 
 {% endblock %}

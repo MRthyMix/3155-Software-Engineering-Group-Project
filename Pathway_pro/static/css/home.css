@@ -224,69 +224,128 @@ section {
 #community {
     background-color: #fff; /* White background */
     padding: 100px 0; /* Add padding top and bottom */
-  }
-  
-  .container {
+}
+
+.container {
     max-width: 1200px; /* Limit content width */
     margin: 0 auto; /* Center container */
     text-align: center; /* Center text */
-  }
-  
-  #community h2 {
+}
+
+#community h2 {
     font-size: 2.5em; /* Large font size */
     margin-bottom: 30px; /* Spacing below title */
-  }
-  
-  .slideshow {
-    position: relative; /* Position relative for absolute positioning of images */
+}
+
+.slideshow {
+    display: flex; /* Display images in a row */
+    justify-content: center; /* Center images horizontally */
     overflow: hidden; /* Hide overflowing images */
-  }
-  
-  .slideshow img {
+}
+
+.slideshow img {
     max-width: 410px; /* Set maximum width for images */
     max-height: 500px; /* Set maximum height for images */
     margin: 10px; /* Add margin around images for spacing */
-    /* position: absolute; Position images absolutely */
-    animation: slideRightToLeft 20s linear infinite; /* Animation settings */
-  }
-  
-  @keyframes slideRightToLeft {
+    animation: slideRightToLeft 35s linear infinite; /* Animation settings */
+}
+
+@keyframes slideRightToLeft {
     0% {
-      transform: translateX(100%); /* Initial position: move 100% from right */
+        transform: translateX(300%); /* Initial position: move 100% from right */
     }
     100% {
-      transform: translateX(-100%); /* Final position: move 100% to the left */
+        transform: translateX(-250%); /* Final position: move 100% to the left */
     }
-  }
-  
+}
 
-/* CSS for FAQ Section */
-#FAQ {
-    background-color: #f6f6ff; 
-    padding: 100px 0; 
+  
+/* CSS for Contact Us and FAQ Sections */
+#contact {
+    background-color: #f9f9f9; /* Light gray background */
+    padding: 100px 0; /* Add padding top and bottom */
+    overflow: hidden; /* Clear floats */
+}
+
+#contact .container {
+    max-width: 1200px; /* Limit content width */
+    margin: 0 auto; /* Center container */
+    text-align: center; /* Center text */
+    overflow: hidden; /* Clear floats */
+}
+
+.contact {
+    width: 30%; /* Adjust left column width */
+    float: left; /* Float left for left column */
+    margin-right: 5%; /* Add space between columns */
+}
+
+.contact h2 {
+    font-size: 2.5em; /* Large font size */
+    margin-bottom: 30px; /* Spacing below title */
+}
+
+.contact form {
+    display: flex; /* Display form elements in a row */
+    flex-direction: column; /* Stack form elements vertically */
+    align-items: center; /* Center form elements horizontally */
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact textarea {
+    width: 100%; /* Make input fields and textarea full-width */
+    padding: 10px; /* Add padding */
+    margin-bottom: 20px; /* Spacing between input fields and textarea */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add border radius */
+}
+
+.contact textarea {
+    height: 150px; /* Set height for textarea */
+}
+
+.contact button {
+    width: 100%; /* Make button full-width */
+    padding: 10px; /* Add padding */
+    background-color: #007bff; /* Blue button color */
+    color: #fff; /* White text color */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Add border radius */
+    cursor: pointer; /* Add pointer cursor on hover */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.contact button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.faq {
+    width: 60%; /* Adjust right column width */
+    float: left; /* Float left for right column */
+    margin-right: 5%; /* Add space between columns */
 }
 
 .faq-header {
-    width: 30%; 
-    padding-right: 50px;
-    float: left; 
+    padding-right: 50px; /* Add space between header and content */
 }
 
-.faq-content {
-    width: 70%; 
-    float: left; 
+.faq h1 {
+    font-size: 2.5em; /* Large font size */
+    margin-bottom: 30px; /* Spacing below title */
 }
 
 .faq-question {
-    margin-bottom: 30px; 
+    margin-bottom: 30px; /* Spacing between questions */
 }
 
 .question {
-    cursor: pointer; 
-    font-size: 1.2em;
-    font-weight: bold; 
-    color: #333; 
-    margin-bottom: 10px; 
+    cursor: pointer; /* Change cursor to pointer on hover */
+    font-size: 1.2em; /* Medium font size */
+    font-weight: bold; /* Bold font weight */
+    color: #333; /* Dark gray text color */
+    margin-bottom: 10px; /* Spacing below question */
+    text-align: left; /* Align text to the left */
 }
 
 .answer {
@@ -307,6 +366,7 @@ section {
 .question.active + .answer {
     display: block; /* Show answer */
 }
+
 
 
 
