@@ -11,7 +11,7 @@
 section {
     position: relative;
     width: 100%;
-    min-height: 80vh; 
+    min-height: 50vh; 
     padding: 0px; 
     display: flex;
     justify-content: space-between;
@@ -23,6 +23,7 @@ section {
     position: relative;
     width: 100%;
     display: flex;
+    min-height: 75vh;
     justify-content: space-between;
     align-items: center;
     margin-left: 170px;
@@ -188,7 +189,7 @@ section {
     justify-content: center;
     align-items: center;
     max-width: 1200px;
-    min-height: 10vh;
+    min-height: 8vh;
     margin: 0 auto;
 }
 
@@ -252,10 +253,10 @@ section {
 
 @keyframes slideRightToLeft {
     0% {
-        transform: translateX(300%); /* Initial position: move 100% from right */
+        transform: translateX(650%); /* Initial position: move 100% from right */
     }
     100% {
-        transform: translateX(-250%); /* Final position: move 100% to the left */
+        transform: translateX(-650%); /* Final position: move 100% to the left */
     }
 }
 

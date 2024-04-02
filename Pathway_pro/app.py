@@ -43,12 +43,12 @@ def signUp():
 def home():
     return render_template("home.html")
 
-@app.route("/userHomePage", methods=['POST'])
+@app.route("/userHomePage", methods=['POST', 'GET'])
 def userHomePage():
     # route for the user homepage once user logs in
     # pass
-    username = request.form['username']
-    return render_template("userHomePage.html")
+    # username = request.form['username']
+    return render_template("checklist.html")
 
 
 if __name__ == '__main__':
