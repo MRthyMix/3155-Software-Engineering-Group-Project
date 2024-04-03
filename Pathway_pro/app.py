@@ -2,7 +2,6 @@ import json
 import os
 import sqlite3
 
-
 from flask import Flask, render_template, url_for, request, redirect
 
 from flask_login import (
@@ -31,7 +30,7 @@ def login():
         username = request.form['username']
         password = request.form['password']
         return render_template("userHomePage.html")
-        
+
 
 @app.route('/signUp', methods=['POST'])
 def signUp():
@@ -42,6 +41,7 @@ def signUp():
 @app.route("/")
 def home():
     return render_template("home.html")
+
 
 @app.route("/userHomePage", methods=['POST', 'GET'])
 def userHomePage():
