@@ -248,7 +248,7 @@ section {
     max-width: 410px; /* Set maximum width for images */
     max-height: 500px; /* Set maximum height for images */
     margin: 10px; /* Add margin around images for spacing */
-    animation: slideRightToLeft 35s linear infinite; /* Animation settings */
+    animation: slideRightToLeft 60s linear infinite; /* Animation settings */
 }
 
 @keyframes slideRightToLeft {
