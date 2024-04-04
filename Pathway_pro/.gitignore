@@ -1,2 +1,6 @@
 __pycache__
 .venv
+sqlite_db
+.vscode
+.env
+venv
