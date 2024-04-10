@@ -5,77 +5,10 @@
 <title>Home-Page</title>
 <!-- Home Style-->
 <link rel="stylesheet" href="{{ url_for('static', filename='/css/home.css') }}">
-<link
-      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
-      rel="stylesheet"
-    />
-    <script>
-      function navigateTo(page) {
-          window.location.href = page;
-      }
-  </script>
-  <style>
-    /* Navbar */
-    .navbar {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100%;
-      background-color: #FFFFFF;
-      padding: 10px 0;
-      z-index: 1000;
-      text-align: center;
-    }
-    .navbar .logo {
-      margin-top: 5px;
-      margin-bottom: 5px;
-      margin-right: 48px;
-      float: left;
-    }
-    .navbar .nav-links {
-      list-style: none;
-      margin: 0;
-      padding: 0;
-      float: left;
-    }
-    .navbar .nav-links li {
-      margin-top: 29px;
-      display: inline-block;
-      margin-right: 20px;
-    }
-    .navbar .nav-links li:last-child {
-      margin-right: 0;
-    }
-    .navbar .nav-links li a {
-      color: #0099FF;
-      text-decoration: none;
-    }
-    .navbar .nav-links li a:hover{
-      color: #0088FF;
-      text-decoration: none;
-    }
-    .navbar .user-links {
-      list-style: none;
-      margin: 0;
-      padding-right: 30px;
-      float: right;
-    }
-    .navbar .user-links a {
-      display: inline-block;
-      padding: 10px 20px;
-      border: 2px solid;
-      border-radius: 5px;
-      border-shadow
-    }
-    .navbar .user-links a.login {
-      background-color: #f0f0f0; 
-    }
-    .navbar .user-links a.signup {
-      color: #333; 
-      background-color: #666; 
-    }
-  </style>
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/navbar.css') }}">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
 <!--JavaScript files -->
+<script src="{{url_for('static', filename='/javascript/navbarpagemove.js')}}"></script>
 {% endblock %}
 
 {% block body %}
