@@ -1,15 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+{% extends 'home_base.html' %}
+
+{% block head %}
     <!-- <link rel="stylesheet" href="checklist.css"> -->
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/checklist.css') }}">
     <script src="{{url_for('static', filename='/javascript/checklist.js')}}"></script>
     <title>Checklist</title>
-</head>
-<body>
+{% endblock %}
 
+{% block body %}
     <header>
         <h1>Pathway Pro</h1>
         <nav>
@@ -156,5 +154,4 @@
 
 <script src="checklist.js"></script>
 
-</body>
-</html>
+{% endblock %}
