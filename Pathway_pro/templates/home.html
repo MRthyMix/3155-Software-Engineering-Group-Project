@@ -9,13 +9,98 @@
       href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
       rel="stylesheet"
     />
+    <script>
+      function navigateTo(page) {
+          window.location.href = page;
+      }
+  </script>
+  <style>
+    /* Navbar */
+    .navbar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #FFFFFF;
+      padding: 10px 0;
+      z-index: 1000;
+      text-align: center;
+    }
+    .navbar .logo {
+      margin-top: 5px;
+      margin-bottom: 5px;
+      margin-right: 48px;
+      float: left;
+    }
+    .navbar .nav-links {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      float: left;
+    }
+    .navbar .nav-links li {
+      margin-top: 29px;
+      display: inline-block;
+      margin-right: 20px;
+    }
+    .navbar .nav-links li:last-child {
+      margin-right: 0;
+    }
+    .navbar .nav-links li a {
+      color: #0099FF;
+      text-decoration: none;
+    }
+    .navbar .nav-links li a:hover{
+      color: #0088FF;
+      text-decoration: none;
+    }
+    .navbar .user-links {
+      list-style: none;
+      margin: 0;
+      padding-right: 30px;
+      float: right;
+    }
+    .navbar .user-links a {
+      display: inline-block;
+      padding: 10px 20px;
+      border: 2px solid;
+      border-radius: 5px;
+      border-shadow
+    }
+    .navbar .user-links a.login {
+      background-color: #f0f0f0; 
+    }
+    .navbar .user-links a.signup {
+      color: #333; 
+      background-color: #666; 
+    }
+  </style>
 <!--JavaScript files -->
 {% endblock %}
 
 {% block body %}
+  <!-- Navbar -->
+  <nav class="navbar"> 
+    <div class="logo">
+      <img src="{{url_for('static', filename='/images/Pathway_pro_full.png')}}" alt= "logo" width="181" height = "78">
+    </div>
+    <ul class="nav-links" >
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#about_section">About</a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#contact">FAQ</a></li>
+    </ul>
+    <div class="user-links">
+      <a class = "login" href="/userLogin">Login</a>
+    </div>
+  </nav>
+
+
+
   <!-- Hero Position -->
-  <section class="hero">
-    <div class="content">
+  <section id="hero">
+    <div class="content" margin-top= 30px>
         <div class="textbox">
             <h2>Welcome to Pathway Pro</h2>
             <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
