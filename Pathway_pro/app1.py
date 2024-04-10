@@ -52,8 +52,20 @@ def load_user(user_id):
 
 @app.route("/")
 def index():
+    return render_template("home.html")
+
+@app.route("/myLearning")
+def myLearningPage():
+    return "My Learning Page"
+
+@app.route("/myProgress")
+def myProgressPage():
+    return "My Learning Page"
+
+@app.route("/userLogin")
+def userLogin():
     if current_user.is_authenticated:
-        return render_template("checklist.html", name=current_user.name)
+        return render_template("checklist.html")
         # return (
         #     "<p>Hello, {}! You're logged in! Email: {}</p>"
         #     "<div><p>Google Profile Picture:</p>"
@@ -142,14 +154,14 @@ def callback():
     login_user(user)
 
     # Send user back to homepage
-    return redirect(url_for("index"))
+    return redirect(url_for("userLogin"))
 
 
 @app.route("/logout")
 @login_required
 def logout():
     logout_user()
-    return redirect(url_for("index"))
+    return redirect(url_for("userLogin"))
 
 # if __name__ == "__main__":
 #     app.run(debug=True)
