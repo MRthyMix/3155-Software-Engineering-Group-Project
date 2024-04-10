@@ -1,160 +1,158 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- <link rel="stylesheet" href="checklist.css"> -->
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/checklist.css') }}">
-    <script src="{{url_for('static', filename='/javascript/checklist.js')}}"></script>
-    <title>Checklist</title>
-</head>
-<body>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/checklist.css') }}">
+        <script src="{{url_for('static', filename='/javascript/checklist.js')}}"></script>
+        <title>Checklist</title>
+    </head>
+    <body>
+        <header>
+            <h1>Pathway Pro</h1>
+            <nav>
+                <a href="/" class="header-link">Home</a>
+                <a href="/myLearning" class="header-link">My Learning</a>
+                <a href="/myProgress" class="header-link">My Progress</a>
+                <a href="/logout" class="header-link">Logout</a>
+            </nav>
+        </header>
 
-    <header>
-        <h1>Pathway Pro</h1>
-        <nav>
-            <a href="/" class="header-link">Home</a>
-            <a href="/myLearning" class="header-link">My Learning</a>
-            <a href="/myProgress" class="header-link">My Progress</a>
-            <a href="/logout" class="header-link">Logout</a>
-        </nav>
-    </header>
-
-    <!-- Subheader for "Learning Modules" -->
-    <div class="subheader">
-        <h2>Learning Modules</h2>
-    </div>
-
-
-<div class="container">
-    <!-- First Checklist -->
-    <div class="checklist">
-        <div class="header">
-            <button onclick="toggleChecklist('checklist1')" class="toggle-button"></button>
-            <h2>Resume Workshop</h2>
+        <!-- Subheader for "Learning Modules" -->
+        <div class="subheader">
+            <h2>Learning Modules</h2>
         </div>
-        <div class="options" id="checklist1">
-            <div class="checklist-item">
-                <label for="item13">The importance of a strong resume</label>
-                <input type="checkbox" id="item1">
-            </div>
-            <div class="checklist-item">
-                <label for="item14">Common resume templates</label>
-                <input type="checkbox" id="item2">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">What should you include on a resume</label>
-                <input type="checkbox" id="item3">
-            </div>
-            <div class="checklist-item">
-                <label for="item13">How to tailor your educational and work experience</label>
-                <input type="checkbox" id="item4">
-            </div>
-            <div class="checklist-item">
-                <label for="item14">Examples of professional resumes</label>
-                <input type="checkbox" id="item5">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">Create one yourself</label>
-                <input type="checkbox" id="item6">
-            </div>
-        </div>
-    </div>
-</div>
 
-<div class="container">
-    <!-- Second Checklist -->
-    <div class="checklist">
-        <div class="header">
-            <button onclick="toggleChecklist('checklist2')" class="toggle-button"></button>
-            <h2>LinkedIn Profile Creation</h2>
-        </div>
-        <div class="options" id="checklist2">
-            <div class="checklist-item">
-                <label for="item13">What is LinkedIn</label>
-                <input type="checkbox" id="item7">
+
+    <div class="container">
+        <!-- First Checklist -->
+        <div class="checklist">
+            <div class="header">
+                <button onclick="toggleChecklist('checklist1')" class="toggle-button"></button>
+                <h2>Resume Workshop</h2>
             </div>
-            <div class="checklist-item">
-                <label for="item14">Setting up a professional profile</label>
-                <input type="checkbox" id="item8">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">How does networking work on LinkedIn</label>
-                <input type="checkbox" id="item9">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">Examples of appealing LinkedIn profiles</label>
-                <input type="checkbox" id="item10">
+            <div class="options" id="checklist1">
+                <div class="checklist-item">
+                    <label for="item13">The importance of a strong resume</label>
+                    <input type="checkbox" id="item1">
+                </div>
+                <div class="checklist-item">
+                    <label for="item14">Common resume templates</label>
+                    <input type="checkbox" id="item2">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">What should you include on a resume</label>
+                    <input type="checkbox" id="item3">
+                </div>
+                <div class="checklist-item">
+                    <label for="item13">How to tailor your educational and work experience</label>
+                    <input type="checkbox" id="item4">
+                </div>
+                <div class="checklist-item">
+                    <label for="item14">Examples of professional resumes</label>
+                    <input type="checkbox" id="item5">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">Create one yourself</label>
+                    <input type="checkbox" id="item6">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="container">
-    <!-- Third Checklist -->
-    <div class="checklist">
-        <div class="header">
-            <button onclick="toggleChecklist('checklist3')" class="toggle-button"></button>
-            <h2>Interview Preparation</h2>
-        </div>
-        <div class="options" id="checklist3">
-            <div class="checklist-item">
-                <label for="item13">What to expect from an interview</label>
-                <input type="checkbox" id="item11">
+    <div class="container">
+        <!-- Second Checklist -->
+        <div class="checklist">
+            <div class="header">
+                <button onclick="toggleChecklist('checklist2')" class="toggle-button"></button>
+                <h2>LinkedIn Profile Creation</h2>
             </div>
-            <div class="checklist-item">
-                <label for="item14">Using the STAR structure to tailor your approach</label>
-                <input type="checkbox" id="item12">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">What do recruiters expect from you</label>
-                <input type="checkbox" id="item13">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">Examples of mock interviews</label>
-                <input type="checkbox" id="item14">
-            </div>
-        </div>
-    </div>
-</div>
-
-<div class="container">
-    <!-- Fourth Checklist -->
-    <div class="checklist">
-        <div class="header">
-            <button onclick="toggleChecklist('checklist4')" class="toggle-button"></button>
-            <h2>Wrapping It All Up</h2>
-        </div>
-        <div class="options" id="checklist4">
-            <div class="checklist-item">
-                <label for="item13">What should I do now</label>
-                <input type="checkbox" id="item15">
-            </div>
-            <div class="checklist-item">
-                <label for="item14">Putting newfound skills to work</label>
-                <input type="checkbox" id="item16">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">Expectations vs reality</label>
-                <input type="checkbox" id="item17">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">Tips to keep in mind</label>
-                <input type="checkbox" id="item18">
-            </div>
-            <div class="checklist-item">
-                <label for="item15">Advice from established professionals</label>
-                <input type="checkbox" id="item19">
+            <div class="options" id="checklist2">
+                <div class="checklist-item">
+                    <label for="item13">What is LinkedIn</label>
+                    <input type="checkbox" id="item7">
+                </div>
+                <div class="checklist-item">
+                    <label for="item14">Setting up a professional profile</label>
+                    <input type="checkbox" id="item8">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">How does networking work on LinkedIn</label>
+                    <input type="checkbox" id="item9">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">Examples of appealing LinkedIn profiles</label>
+                    <input type="checkbox" id="item10">
+                </div>
             </div>
         </div>
     </div>
-</div>
 
-<footer>
-    <p>Copyright © 2024 Pathway Pro. All rights reserved.</p>
-</footer>
+    <div class="container">
+        <!-- Third Checklist -->
+        <div class="checklist">
+            <div class="header">
+                <button onclick="toggleChecklist('checklist3')" class="toggle-button"></button>
+                <h2>Interview Preparation</h2>
+            </div>
+            <div class="options" id="checklist3">
+                <div class="checklist-item">
+                    <label for="item13">What to expect from an interview</label>
+                    <input type="checkbox" id="item11">
+                </div>
+                <div class="checklist-item">
+                    <label for="item14">Using the STAR structure to tailor your approach</label>
+                    <input type="checkbox" id="item12">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">What do recruiters expect from you</label>
+                    <input type="checkbox" id="item13">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">Examples of mock interviews</label>
+                    <input type="checkbox" id="item14">
+                </div>
+            </div>
+        </div>
+    </div>
 
-<script src="checklist.js"></script>
+    <div class="container">
+        <!-- Fourth Checklist -->
+        <div class="checklist">
+            <div class="header">
+                <button onclick="toggleChecklist('checklist4')" class="toggle-button"></button>
+                <h2>Wrapping It All Up</h2>
+            </div>
+            <div class="options" id="checklist4">
+                <div class="checklist-item">
+                    <label for="item13">What should I do now</label>
+                    <input type="checkbox" id="item15">
+                </div>
+                <div class="checklist-item">
+                    <label for="item14">Putting newfound skills to work</label>
+                    <input type="checkbox" id="item16">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">Expectations vs reality</label>
+                    <input type="checkbox" id="item17">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">Tips to keep in mind</label>
+                    <input type="checkbox" id="item18">
+                </div>
+                <div class="checklist-item">
+                    <label for="item15">Advice from established professionals</label>
+                    <input type="checkbox" id="item19">
+                </div>
+            </div>
+        </div>
+    </div>
 
-</body>
+    <footer>
+        <p>Copyright © 2024 Pathway Pro. All rights reserved.</p>
+    </footer>
+
+    <script src="checklist.js"></script>
+
+    </body>
 </html>
