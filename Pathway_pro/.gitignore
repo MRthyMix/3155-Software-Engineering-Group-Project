@@ -4,3 +4,4 @@ sqlite_db
 .vscode
 .env
 venv
+.idea
