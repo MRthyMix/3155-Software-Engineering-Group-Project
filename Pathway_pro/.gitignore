@@ -5,3 +5,4 @@ sqlite_db
 .env
 venv
 .idea
+.pytest_cache
