@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/signup.css') }}">
+</head>
+<body>
+    <div class="signup-container">
+        <h1>Signup</h1>
+        <form action="/userSignup" method="POST">
+            <div class="form-group">
+                <label for="studentID">Student ID:</label>
+                <input type="text" id="studentID" name="studentID" required minlength="9" maxlength="9" placeholder="Enter your Student ID">
+                <small class="error-message">Student ID must be 9 digits long.</small>
+            </div>
+            <div class="form-group">
+                <label for="major">Major:</label>
+                <input type="text" id="major" name="major" required placeholder="Enter your major">
+            </div>
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="text" id="year" name="year" required placeholder="Enter your year">
+            </div>
+            <div class="form-group">
+                <label for="gpa">GPA:</label>
+                <input type="text" id="gpa" name="gpa" required placeholder="Enter your GPA">
+            </div>
+            <div class="form-group">
+                <label for="advisor">Advisor:</label>
+                <input type="text" id="advisor" name="advisor" required placeholder="Enter your advisor's name">
+            </div>
+            <div class="form-group">
+                <label for="Enrollment_Status">Classification:</label>
+                <select id="classification" name="Enrollment_Status" required>
+                    <option value="">Select your classification</option>
+                    <option value="freshman">Freshman</option>
+                    <option value="sophomore">Sophomore</option>
+                    <option value="junior">Junior</option>
+                    <option value="senior">Senior</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="level">Level:</label>
+                <select id="level" name="level" required>
+                    <option value="">Select your level</option>
+                    <option value="undergraduate">Undergraduate</option>
+                    <option value="graduate">Graduate</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="program">Program:</label>
+                <input type="text" id="program" name="program" required placeholder="Enter your program">
+            </div>
+            <div class="form-group">
+                <label for="college">College:</label>
+                <input type="text" id="college" name="college" required placeholder="Enter your college">
+            </div>
+            <div class="form-group">
+                <label for="college">Phone Number:</label>
+                <input type="text" id="phone_number" name="phone_number" required placeholder="Enter your phone number">
+            </div>
+            <button type="submit">Signup</button>
+        </form>
+    </div>
+</body>
+</html>
