@@ -1,0 +1,42 @@
+{% extends 'home_base.html' %}
+
+{% block head %}
+<title>User Profile</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/profilePage.css') }}">
+<link rel="stylesheet" href="{{ url_for('static', filename='/css/checklist.css') }}">
+{% endblock %}
+
+{% block body %}    
+    <header>
+        <h1>Pathway Pro</h1>
+        <nav>
+            <a href="/" class="header-link">Home</a>
+            <a href="/myLearning" class="header-link">My Learning</a>
+            <a href="/myProgress" class="header-link">My Progress</a>
+            <a href="/logout" class="header-link">Logout</a>
+            <a href="/myProfile" class="header-link">My Profile</a>
+        </nav>
+    </header>
+    <div class="profile-container">
+        <div class="profile-picture">
+            <img src={{userPP}} alt="User Picture">
+        </div>
+        <div class="profile-details">
+            <h1>{{ userName }}</h1>
+            <p>Email: {{ userEmail }}</p>
+            <p>Student ID: {{ studentID }}</p>
+            <p>Major: {{ major }}</p>
+            <p>Year: {{ year }}</p>
+            <p>GPA: {{ gpa }}</p>
+            <p>Advisor: {{ advisor }}</p>
+            <p>Enrollment Status: {{ enrollmentStatus }}</p>
+            <p>Address: {{ address }}</p>
+            <p>City: {{ city }}</p>
+            <p>State: {{ state }}</p>
+            <p>Country: {{ country }}</p>
+            <p>Zip Code: {{ zipCode }}</p>
+            <p>Phone Number: {{ phoneNumber }}</p>
+            <!-- Add more relevant details here -->
+        </div>
+    </div>
+{% endblock %}

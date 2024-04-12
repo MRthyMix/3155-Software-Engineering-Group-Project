@@ -1,0 +1,84 @@
+/* body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-details {
+    text-align: left;
+}
+
+.profile-details h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 18px;
+} */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.profile-picture {
+    margin-right: 20px;
+}
+
+.profile-picture img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+
+.profile-details {
+    text-align: left;
+}
+
+.profile-details h1 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.profile-details p {
+    margin-top: 0;
+    margin-bottom: 5px;
+    font-size: 18px;
+}
+
+/* Additional styles for more information */
+.profile-details p:nth-child(odd) {
+    font-weight: bold;
+}
+
+.profile-details p:last-child {
+    margin-bottom: 0;
+}
