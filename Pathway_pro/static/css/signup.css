@@ -1,64 +1,78 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    background-color: black;
 }
 
 .signup-container {
-    width: 400px;
-    margin: 50px auto;
+    width: 600px;
+    margin: 0 auto;
     padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
 }
 
-h1 {
+.signup-container:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.signup-container h1 {
     text-align: center;
+    color: #333;
+    margin-bottom: 30px;
 }
 
-.form-group {
-    margin-bottom: 20px;
+.signup-container form {
+    display: flex;
+    flex-direction: column;
 }
 
-label {
-    display: block;
+.signup-container form label {
+    font-size: 16px;
     margin-bottom: 5px;
+    color: #555;
 }
 
-input[type="text"],
-select {
-    width: 100%;
+.signup-container form input,
+.signup-container form select {
     padding: 10px;
-    font-size: 16px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
-    border-radius: 5px;
+    border-radius: 15px;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out;
 }
 
-button {
-    width: 100%;
+.signup-container form button {
     padding: 10px;
-    font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
     border: none;
     border-radius: 5px;
+    background-color: #007bff;
+    color: #fff;
     cursor: pointer;
+    font-size: 18px;
+    transition: background-color 0.3s ease-in-out;
 }
 
-button:hover {
+.signup-container form button:hover {
     background-color: #0056b3;
 }
 
-.error-message {
-    display: none;
+.signup-container form .error-message {
     color: red;
-    font-size: 12px;
+    margin-bottom: 10px;
+    text-align: center;
 }
 
-.invalid {
-    border: 1px solid red;
+.signup-container form input:hover,
+.signup-container form select:hover {
+    transform: scale(1.03);
 }
 
-.invalid ~ .error-message {
-    display: block;
+.signup-container form label,
+.signup-container form input,
+.signup-container form select {
+    width: 80%; /* Adjust this value as needed */
+    margin-left: auto;
+    margin-right: auto;
 }

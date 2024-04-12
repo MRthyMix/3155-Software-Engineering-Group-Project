@@ -83,9 +83,12 @@ def userLogin():
         # return '<a class="button" href="/login">Google Login</a>'
         return render_template("login_screen.html")
 
-@app.route("/userSignup", methods=['POST'])
+@app.route("/userSignup", methods=['GET','POST'])
 def userSignUp():
-    return "My Learning Page"
+    if request.method == 'GET':
+        return render_template("signup_screen.html")
+    else:
+        return "User Signup"
 
 
 def get_google_provider_cfg():
@@ -158,7 +161,8 @@ def callback():
 
     # Doesn't exist? Add it to the database.
     if not User.get(unique_id):
-        User.create(unique_id, users_name, users_email, picture)
+        return redirect(url_for("userSignUp"))
+        # User.create(unique_id, users_name, users_email, picture)
 
     # Begin user session by logging the user in
     login_user(user)
