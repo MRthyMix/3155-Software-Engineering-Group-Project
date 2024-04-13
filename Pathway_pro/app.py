@@ -161,8 +161,8 @@ def callback():
 
     # Doesn't exist? Add it to the database.
     if not User.get(unique_id):
-        return redirect(url_for("userSignUp"))
-        # User.create(unique_id, users_name, users_email, picture)
+        #return redirect(url_for("userSignUp"))
+        User.create(unique_id, users_name, users_email, picture)
 
     # Begin user session by logging the user in
     login_user(user)
