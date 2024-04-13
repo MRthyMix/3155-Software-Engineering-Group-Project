@@ -183,7 +183,7 @@ section {
 
 
 /* CSS for About Us section */
-.about-content, .mission-content, .approach-content {
+.about-content {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -193,32 +193,111 @@ section {
     margin: 0 auto;
 }
 
-.about-text, .mission-text, .approach-text {
+.about-text {
     flex: 1;
     padding: 20px;
 }
 
-.about-text h1, .mission-text h1, .approach-text h1 {
+.about-text h1 {
     font-size: 36px;
     color: #333;
 }
 
-.about-text p, .mission-text p, .approach-text p {
+.about-text p {
     font-size: 18px;
     line-height: 1.6;
     color: #555;
 }
 
-.about-image, .mission-image, .approach-image {
+.about-image {
     flex: 1;
     padding: 20px;
 }
 
-.about-image img, .mission-image img, .approach-image img {
+.about-image img {
     max-width: 100%;
     height: auto;
     border-radius: 8px;
 }
+
+/* CSS for Our Mission section */
+.mission-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 8vh;
+    margin: 0 auto;
+}
+
+.mission-text {
+    flex: 1;
+    padding: 20px;
+    order: 2; /* Change the order to display text after the image */
+}
+
+.mission-text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.mission-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.mission-image {
+    flex: 1;
+    padding: 20px;
+    order: 1; /* Change the order to display image before the text */
+}
+
+.mission-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* CSS for Approach section */
+.approach-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    min-height: 8vh;
+    margin: 0 auto;
+}
+
+.approach-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.approach-text h1 {
+    font-size: 36px;
+    color: #333;
+}
+
+.approach-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #555;
+}
+
+.approach-image {
+    flex: 1;
+    padding: 20px;
+}
+
+.approach-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
 
 
 /* CSS for Community Section */
@@ -347,6 +426,7 @@ section {
     color: #333; /* Dark gray text color */
     margin-bottom: 10px; /* Spacing below question */
     text-align: left; /* Align text to the left */
+    transition: color 0.3s; /* Smooth transition for color change */
 }
 
 .answer {
@@ -360,7 +440,7 @@ section {
 
 /* Add hover effect to question */
 .question:hover {
-    color: #555; /* Darken text color on hover */
+    color: #007bff; /* Change text color on hover */
 }
 
 /* Show answer when question is clicked */

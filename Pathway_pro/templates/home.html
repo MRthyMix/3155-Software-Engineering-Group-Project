@@ -9,6 +9,8 @@
 <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet"/>
 <!--JavaScript files -->
 <script src="{{url_for('static', filename='/javascript/navbarpagemove.js')}}"></script>
+<script src="{{url_for('static', filename='/javascript/dropDown.js')}}"></script>
+<script src="{{url_for('static', filename='/javascript/slideshow.js')}}"></script>
 {% endblock %}
 
 {% block body %}
@@ -38,15 +40,15 @@
             <h2>Welcome to Pathway Pro</h2>
             <p>Embark on a journey towards your dream career with Pathway Pro. Our personalized guidance and resources will help you achieve your professional goals.</p>
             <div class="buttons-container">
-                <a href="#" class="btn">Become a Member</a>
-                <!-- Video button -->
+                <a href="/userLogin" class="btn">Become a Member</a>
+                <!-- Video button
                 <div class="video-button">
                     <div class="video__image">
                         <img src="{{url_for('static', filename='/images/PWP_icon.png')}}" alt="story">
                         <span><i class="ri-play-circle-fill"></i></span>
                     </div>
                     <span>Watch Our story</span>
-                </div>
+                </div> -->
             </div>
         </div>
         <!-- Student Image-->
@@ -136,11 +138,11 @@
   <div class="about-content">
     <div class="about-text">
       <h1>About Us</h1>
-      <p>HubSpot’s company and culture are a lot like our product. They’re crafted, not cobbled, for a delightful experience.</p>
-      <p>We believe in...</p>
+      <p>At Pathway Pro, we're here to help UNCC undergrads get ready for life after college. 
+        Our tool, Pathway Pro, is like a personal assistant for job hunting.</p>
     </div>
     <div class="about-image">
-      <img src="https://www.hubspot.com/hs-fs/hubfs/Hubspotters.jpg?width=701&amp;height=468&amp;name=Hubspotters.jpg" alt="Hubspotters">
+      <img src="{{url_for('static', filename='/images/group_photo.jpg')}}" alt="group_photo">
     </div>
   </div>
 </section>
@@ -149,11 +151,10 @@
   <div class="mission-content">
     <div class="mission-text">
       <h1>Our Mission</h1>
-      <p>Our mission at Pathway Pro is to empower UNCC undergraduate students with the tools and guidance they need to thrive in their chosen fields. We are committed to providing personalized support and resources that facilitate...</p>
+      <p>Our mission at Pathway Pro is to empower UNCC undergraduate students with the tools and guidance they need to thrive in their chosen fields.</p>
     </div>
     <div class="mission-image">
-      <img src="https://www.hubspot.com/hs-fs/hubfs/Hubspotters.jpg?width=701&amp;height=468&amp;name=Hubspotters.jpg" alt="Hubspotters">
-    </div>
+      <img src="{{url_for('static', filename='/images/sir_check.jpg')}}" alt="sir_check">
   </div>
 </section>
 <!-- Approach position -->
@@ -161,10 +162,12 @@
   <div class="approach-content">
     <div class="approach-text">
       <h1>Our Approach</h1>
-      <p>What sets Pathway Pro apart is our commitment to individualized learning and professional development. We understand that every student's journey is unique, which is why our platform offers tailored recommendations based on each user's goals, interests, and career aspirations...</p>
+      <p>What sets Pathway Pro apart is our commitment to personalized learning and professional development. 
+        We understand that every student’s journey is unique, which is why our platform offers personalized 
+        recommendations based on each user’s goals, interests and career aspirations.</p>
     </div>
     <div class="approach-image">
-      <img src="https://www.hubspot.com/hs-fs/hubfs/Hubspotters.jpg?width=701&amp;height=468&amp;name=Hubspotters.jpg" alt="Hubspotters">
+      <img src="{{url_for('static', filename='/images/women.jpeg')}}" alt="girl_career">
     </div>
   </div>
 </section>
@@ -212,49 +215,56 @@
         <div class="faq-question">
           <h3 class="question">Can I use Pathway Pro if I'm not a student at UNCC?</h3>
           <div class="answer">
-            <p>Answer 1 goes here.</p>
+            <p>Yes, Pathway Pro is available to anyone interested in career planning and development regardless of affiliation with UNCC. 
+              Pathway Pro can be used by individuals at different stages of their career journey.</p>
           </div>
         </div>
         <!-- Repeat this for each question -->
         <div class="faq-question">
           <h3 class="question">Is Pathway Pro free to use, or are there any subscription fees?</h3>
           <div class="answer">
-            <p>Answer 2 goes here.</p>
+            <p>Pathway Pro offers a free version with basic features, while additional premium features may require a subscription. 
+              However, specific pricing and subscription details can be found on our website.</p>
           </div>
         </div>
         <!-- Repeat for other questions -->
         <div class="faq-question">
           <h3 class="question">Can I customize my checklist based on my specific career goals and interests?</h3>
           <div class="answer">
-            <p>Answer 3 goes here.</p>
+            <p>Absolutely! Pathway Pro allows you to personalize your checklist according to your unique career aspirations and interests.
+              Meanwhile, you reconfigure your checklist as you go.
+            </p>
           </div>
         </div>
         <!-- Repeat for other questions -->
         <div class="faq-question">
           <h3 class="question">Can I track my progress and update my checklist as I go?</h3>
           <div class="answer">
-            <p>Answer 4 goes here.</p>
+            <p>Yes, Pathway Pro provides tools to track your progress and update your checklist as you make advancements in your career journey. </p>
           </div>
         </div>
         <!-- Repeat for other questions -->
         <div class="faq-question">
           <h3 class="question">How frequently is Pathway Pro updated with new features or content?</h3>
           <div class="answer">
-            <p>Answer 5 goes here.</p>
+            <p>The Pathway Pro platform will continuously be refreshed with new features, improvements and content. . 
+              We want Pathway Pro to evolve and keep the platform current to provide the best available career guidance possible.</p>
           </div>
         </div>
         <!-- Repeat for other questions -->
         <div class="faq-question">
           <h3 class="question">Can I access Pathway Pro on my mobile device?</h3>
           <div class="answer">
-            <p>Answer 6 goes here.</p>
+            <p>Yes, Pathway Pro is optimized for mobile devices, allowing you to access your career planning tools and resources on the go. 
+              Whether you're using a smartphone or tablet, you can seamlessly navigate the platform and stay connected to your career goals.</p>
           </div>
         </div>
         <!-- Repeat for other questions -->
         <div class="faq-question">
           <h3 class="question">How can I contact customer support if I encounter any issues or have further questions?</h3>
           <div class="answer">
-            <p>Answer 7 goes here.</p>
+            <p>If you experience any difficulties or have any questions, you can contact our customer support team via 
+              email, phone or through our online support portal to get assistance in a timely manner.</p>
           </div>
         </div>
       </div>
