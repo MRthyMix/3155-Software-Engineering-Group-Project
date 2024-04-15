@@ -12,6 +12,8 @@ from flask_login import (
     login_user,
     logout_user,
 )
+
+#Brian Here Typing
 from oauthlib.oauth2 import WebApplicationClient
 import requests
 
