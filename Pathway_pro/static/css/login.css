@@ -1,19 +1,19 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: black; /* Set overall background color to black */
+    background-color: black;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
-    height: 100vh; /* Set full height */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
 }
 
 .login-signup-container {
-    width: 350px; /* Adjust width of container */
+    width: 350px;
     padding: 20px;
-    background-color: white; /* Set background color of login/signup container to white */
-    border-radius: 12px; /* Make container edges rounder */
+    background-color: white;
+    border-radius: 12px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -30,7 +30,7 @@ body {
     font-size: 16px;
     border-bottom: 2px solid transparent;
     transition: border-color 0.3s ease-in-out;
-    border-radius: 12px; /* Make tab buttons rounder */
+    border-radius: 12px;
 }
 
 .tab-btn.active {
@@ -66,7 +66,7 @@ input[type="submit"] {
     width: 100%;
     padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 12px; /* Make input boxes and buttons rounder */
+    border-radius: 12px;
     box-sizing: border-box;
     font-size: 16px;
     transition: border-color 0.3s ease-in-out;
@@ -88,4 +88,35 @@ input[type="password"]:focus,
 input[type="email"]:focus {
     border-color: #007bff;
     outline: none;
+}
+
+/* Added custom styles for the modified button */
+.login-btn {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    box-sizing: border-box;
+    font-size: 16px;
+    background-color: #007bff;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-btn img {
+    margin-right: 10px;
+}
+
+/* New CSS for logo container */
+.logo-container {
+    text-align: center; /* Center the logo */
+    margin-bottom: -20px; /* Add margin below the logo */
+}
+
+.logo {
+    width: 40px; /* Adjust the width of the logo */
+    height: auto; /* Maintain aspect ratio */
 }
