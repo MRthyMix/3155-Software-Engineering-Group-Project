@@ -65,31 +65,79 @@ def myProgressPage():
 @app.route("/myProfile")
 def myProfilePage():
     # current_user.name, current_user.email, current_user.profile_pic
-    return render_template("profilePage.html", userName=current_user.name, userEmail=current_user.email, userPP=current_user.profile_pic)
+    user = User.getAll(current_user.id)
+    return render_template("profilePage.html", user=user)
+
+@app.route("/userDelete", methods=['GET'])
+@login_required
+def userDelete():
+    User.delete(current_user.id)
+    logout_user()
+    return redirect(url_for("userLogin"))
 
 @app.route("/userLogin")
 def userLogin():
     if current_user.is_authenticated:
         return render_template("checklist.html")
-        # return (
-        #     "<p>Hello, {}! You're logged in! Email: {}</p>"
-        #     "<div><p>Google Profile Picture:</p>"
-        #     '<img src="{}" alt="Google profile pic"></img></div>'
-        #     '<a class="button" href="/logout">Logout</a>'.format(
-        #         current_user.name, current_user.email, current_user.profile_pic
-        #     )
-        # )
     else:
-        # return '<a class="button" href="/login">Google Login</a>'
         return render_template("login_screen.html")
 
-@app.route("/userSignup", methods=['GET','POST'])
-def userSignUp():
+@app.route("/userUpdate", methods=['GET','POST'])
+def userUpdate():
+    user = User.getAll(current_user.id)
     if request.method == 'GET':
-        return render_template("signup_screen.html")
+        return render_template("signup_screen.html", user=user)
     else:
-        return "User Signup"
+        if request.form["major"] == "":
+            user.major = ""
+        else:
+            user.major = request.form["major"]
+        
+        if request.form["year"] == "":
+            user.year = ""
+        else:
+            user.year = request.form["year"]
+        
+        if request.form["gpa"] == "":
+            user.gpa = ""
+        else:
+            user.gpa = request.form["gpa"]
+        
+        if request.form["advisor"] == "":
+            user.advisor = ""
+        else:
+            user.advisor = request.form["advisor"]
+        
+        if request.form["Enrollment_Status"] == "":
+            user.Enrollment_Status = ""
+        else:
+            user.Enrollment_Status = request.form["Enrollment_Status"]
+        
+        if request.form["level"] == "":
+            user.level = ""
+        else:
+            user.level = request.form["level"]
+        
+        if request.form["program"] == "":
+            user.program = ""
+        else:
+            user.program = request.form["program"]
 
+        if request.form["college"] == "":
+            user.college = ""
+        else:
+            user.college = request.form["college"]
+        
+        User.update(current_user.id, user.major, 
+                    user.year, 
+                    user.gpa, 
+                    user.advisor, 
+                    user.Enrollment_Status, 
+                    user.level, 
+                    user.program, 
+                    user.college
+                )
+        return redirect(url_for("myProfilePage"))
 
 def get_google_provider_cfg():
     return requests.get(GOOGLE_DISCOVERY_URL).json()
@@ -161,7 +209,6 @@ def callback():
 
     # Doesn't exist? Add it to the database.
     if not User.get(unique_id):
-        #return redirect(url_for("userSignUp"))
         User.create(unique_id, users_name, users_email, picture)
 
     # Begin user session by logging the user in
@@ -177,8 +224,6 @@ def logout():
     logout_user()
     return redirect(url_for("userLogin"))
 
-# if __name__ == "__main__":
-#     app.run(debug=True)
 
 if __name__ == "__main__":
     app.run(ssl_context="adhoc")

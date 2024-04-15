@@ -19,24 +19,28 @@
     </header>
     <div class="profile-container">
         <div class="profile-picture">
-            <img src={{userPP}} alt="User Picture">
+            <img src={{user.profile_pic}} alt="User Picture">
         </div>
         <div class="profile-details">
-            <h1>{{ userName }}</h1>
-            <p>Email: {{ userEmail }}</p>
-            <!-- <p>Student ID: {{ studentID }}</p>
-            <p>Major: {{ major }}</p>
-            <p>Year: {{ year }}</p>
-            <p>GPA: {{ gpa }}</p>
-            <p>Advisor: {{ advisor }}</p>
-            <p>Enrollment Status: {{ enrollmentStatus }}</p>
-            <p>Address: {{ address }}</p>
-            <p>City: {{ city }}</p>
-            <p>State: {{ state }}</p>
-            <p>Country: {{ country }}</p>
-            <p>Zip Code: {{ zipCode }}</p>
-            <p>Phone Number: {{ phoneNumber }}</p> -->
+            <h1>{{ user.name }}</h1>
+            <p>Email: {{ user.email }}</p>
+            <p>Major: {{ user.major }}</p>
+            <p>Year: {{ user.year }}</p>
+            <p>GPA: {{ user.gpa }}</p>
+            <p>Advisor: {{ user.advisor }}</p>
+            <p>Enrollment Status: {{ user.Enrollment_Status }}</p>
+            <p>Level: {{ user.level }}</p>
+            <p>Program: {{ user.program }}</p>
+            <p>College: {{ user.college }}</p>
             <!-- Add more relevant details here -->
+        </div>
+        <div class="button-container">
+            <form action="/userUpdate" method="GET">
+                <input type="submit" value="Edit Profile" class="edit-profile-button">
+            </form>
+            <form action="/userDelete" method="GET">
+                <input type="submit" value="Delete Profile" class="edit-profile-button">
+            </form>
         </div>
     </div>
 {% endblock %}

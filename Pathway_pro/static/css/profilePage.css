@@ -44,6 +44,7 @@ body {
 
 .profile-container {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -81,4 +82,28 @@ body {
 
 .profile-details p:last-child {
     margin-bottom: 0;
+}
+
+.edit-profile-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 12px; /* Make the button a little round */
+    background-color: #007bff; /* Add blue color */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.profile-container form {
+    /* margin-top: auto; */
+    justify-content: center;
+    display: inline-flex;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
 }
