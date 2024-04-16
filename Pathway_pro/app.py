@@ -12,8 +12,8 @@ from flask_login import (
     login_user,
     logout_user,
 )
-#cloud 
 
+from flask_cors import CORS
 from oauthlib.oauth2 import WebApplicationClient
 import requests
 
@@ -31,6 +31,7 @@ GOOGLE_DISCOVERY_URL = (
 # Flask app setup
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY") or os.urandom(24)
+CORS(app)  # Enable CORS for all routes and origins
 
 # User session management setup
 # https://flask-login.readthedocs.io/en/latest
