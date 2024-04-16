@@ -7,7 +7,7 @@ class User(UserMixin):
     Represents a user in the system.
 
     Attributes:
-        id (int): The user's ID.
+        id (str): The user's ID.
         name (str): The user's name.
         email (str): The user's email address.
         profile_pic (str): The URL of the user's profile picture.
@@ -47,7 +47,7 @@ class User(UserMixin):
         Retrieves a user from the database by their ID.
 
         Args:
-            user_id (int): The ID of the user to retrieve.
+            user_id (str): The ID of the user to retrieve.
 
         Returns:
             User: The User object representing the retrieved user, or None if the user does not exist.
@@ -70,7 +70,7 @@ class User(UserMixin):
         Retrieves all user attributes from the database by their ID.
 
         Args:
-            user_id (int): The ID of the user to retrieve.
+            user_id (str): The ID of the user to retrieve.
 
         Returns:
             User: The User object representing the retrieved user, or None if the user does not exist.
@@ -105,7 +105,7 @@ class User(UserMixin):
         Creates a new user in the database.
 
         Args:
-            id_ (int): The ID of the user.
+            id_ (str): The ID of the user.
             name (str): The name of the user.
             email (str): The email address of the user.
             profile_pic (str): The URL of the user's profile picture.
@@ -119,12 +119,40 @@ class User(UserMixin):
         db.commit()
     
     @staticmethod
+    def createUsingALlAttributes(id_, name, email, profile_pic, major, year, gpa, advisor, Enrollment_Status, level, program, college):
+        """
+        Creates a new user in the database with all attributes.
+
+        Args:
+            id_ (str): The ID of the user.
+            name (str): The name of the user.
+            email (str): The email address of the user.
+            profile_pic (str): The URL of the user's profile picture.
+            major (str): The user's major.
+            year (int): The user's academic year.
+            gpa (float): The user's GPA.
+            advisor (str): The user's advisor.
+            Enrollment_Status (str): The user's enrollment status.
+            level (str): The user's level.
+            program (str): The user's program.
+            college (str): The user's college.
+        """
+        db = get_db()
+        db.execute(
+            "INSERT INTO user (id, name, email, profile_pic, major, year, gpa, advisor, Enrollment_Status, level, program, college) "
+            "VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)",
+            (id_, name, email, profile_pic, major, year, gpa, advisor, Enrollment_Status, level, program, college),
+        )
+        db.commit()
+
+    
+    @staticmethod
     def update(id_, major, year, gpa, advisor, Enrollment_Status, level, program, college):
         """
         Updates the attributes of a user in the database.
 
         Args:
-            id_ (int): The ID of the user.
+            id_ (str): The ID of the user.
             major (str): The user's major.
             year (int): The user's academic year.
             gpa (float): The user's GPA.
@@ -147,7 +175,7 @@ class User(UserMixin):
         Deletes a user from the database.
 
         Args:
-            id_ (int): The ID of the user to delete.
+            id_ (str): The ID of the user to delete.
         """
         db = get_db()
         db.execute(
