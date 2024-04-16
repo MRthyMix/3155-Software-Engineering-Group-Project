@@ -13,7 +13,7 @@ from flask_login import (
     logout_user,
 )
 
-#Brian Here Typing
+
 from oauthlib.oauth2 import WebApplicationClient
 import requests
 
