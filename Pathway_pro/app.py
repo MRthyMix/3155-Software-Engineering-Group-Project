@@ -89,7 +89,7 @@ def userLogin():
 def userUpdate():
     user = User.getAll(current_user.id)
     if request.method == 'GET':
-        return render_template("signup_screen.html", user=user)
+        return render_template("update_profile_screen.html", user=user)
     else:
         if request.form["major"] == "":
             user.major = ""
