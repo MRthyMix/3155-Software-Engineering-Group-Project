@@ -1,3 +1,3 @@
-# from app.py import create_app
+from Pathway_pro.app import create_app
 
-# app = create_app()
+app = create_app()
