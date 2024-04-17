@@ -72,7 +72,7 @@ def myCommunityPage():
 @app.route("/myProfile")
 def myProfilePage():
     # current_user.name, current_user.email, current_user.profile_pic
-    user = User.getAll(current_user.id)
+    user = User.getAllAttributesByUserID(current_user.id)
     return render_template("profilePage.html", user=user)
 
 @app.route("/userDelete", methods=['GET'])
@@ -91,7 +91,7 @@ def userLogin():
 
 @app.route("/userUpdate", methods=['GET','POST'])
 def userUpdate():
-    user = User.getAll(current_user.id)
+    user = User.getAllAttributesByUserID(current_user.id)
     if request.method == 'GET':
         return render_template("update_profile_screen.html", user=user)
     else:
