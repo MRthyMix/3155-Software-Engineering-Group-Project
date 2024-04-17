@@ -33,7 +33,7 @@ def test_create_user(create_user):
     
 def test_update_user(create_user):
     with app.app_context():
-        assert User.getAll("1") is None
+        assert User.getAllAttributesByUserID("1") is None
         User.createUsingALlAttributes(
             create_user.id, 
             create_user.name, 
@@ -48,9 +48,9 @@ def test_update_user(create_user):
             create_user.program, 
             create_user.college
         )
-        assert User.getAll("1") is not None
+        assert User.getAllAttributesByUserID("1") is not None
         User.update("1", "Computer Engineering", "2024", "3.7", "Dr. Johnson", "Sophomore", "Graduate", "Masters", "Engineering")
-        updated_user = User.getAll("1")
+        updated_user = User.getAllAttributesByUserID("1")
         assert updated_user.major == "Computer Engineering" and create_user.major != updated_user.major
         assert updated_user.year == "2024" and create_user.year != updated_user.year
         assert updated_user.gpa == "3.7" and create_user.gpa != updated_user.gpa
