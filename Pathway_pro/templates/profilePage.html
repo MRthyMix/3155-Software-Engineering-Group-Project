@@ -1,4 +1,4 @@
-{% extends 'home_base.html' %}
+{% extends 'user_home_base.html' %}
 
 {% block head %}
 <title>User Profile</title>
@@ -7,16 +7,6 @@
 {% endblock %}
 
 {% block body %}    
-    <header>
-        <h1>Pathway Pro</h1>
-        <nav>
-            <a href="/" class="header-link">Home</a>
-            <a href="/myLearning" class="header-link">My Learning</a>
-            <a href="/myProgress" class="header-link">My Progress</a>
-            <a href="/logout" class="header-link">Logout</a>
-            <a href="/myProfile" class="header-link">My Profile</a>
-        </nav>
-    </header>
     <div class="profile-container">
         <div class="profile-picture">
             <img src={{user.profile_pic}} alt="User Picture">

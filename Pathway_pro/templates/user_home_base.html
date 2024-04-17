@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <!--favicon icon-->
+      <link rel="shortcut icon" href="{{ url_for('static', filename='/images/Pathway_pro_icon_white.png') }}">
+      <!-- Link to the checklist CSS file because of the nav styles -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/checklist.css') }}">
+        <header>
+            <h1>Pathway Pro</h1>
+            <nav>
+                <a href="/" class="header-link">Home</a>
+                <a href="/myLearning" class="header-link">My Learning</a>
+                <a href="/myProgress" class="header-link">My Progress</a>
+                <a href="/myCommunity" class="header-link">My Community</a>
+                <a href="/myProfile" class="header-link">My Profile</a>
+                <a href="/logout" class="header-link">Logout</a>
+            </nav>
+        </header>
+      {% block head %}{% endblock %}
+  </head>
+  <body>
+  
+      <div>
+          {% block body %}{% endblock %}
+      </div>
+      <style>
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+      </style>
+    
+      <footer>
+        <p>Copyright © 2024 Pathway Pro. All rights reserved.</p>
+    </footer>
+
+  </body>
+</html>

@@ -64,6 +64,11 @@ def myLearningPage():
 def myProgressPage():
     return "My Learning Page"
 
+@app.route("/myCommunity")
+def myCommunityPage():
+    user = User.getAll(current_user.id)
+    return render_template("community.html", user=user)
+
 @app.route("/myProfile")
 def myProfilePage():
     # current_user.name, current_user.email, current_user.profile_pic

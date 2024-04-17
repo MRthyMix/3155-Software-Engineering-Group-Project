@@ -1,4 +1,5 @@
-{% extends 'home_base.html' %}
+{% extends 'user_home_base.html' %}
+
 {% block head %}
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/checklist.css') }}">
     <script src="{{url_for('static', filename='/javascript/checklist.js')}}"></script>
@@ -6,18 +7,6 @@
 {% endblock %}
 
 {% block body %}
-
-    <header>
-        <h1>Pathway Pro</h1>
-        <nav>
-            <a href="/" class="header-link">Home</a>
-            <a href="/myLearning" class="header-link">My Learning</a>
-            <a href="/myProgress" class="header-link">My Progress</a>
-            <a href="/logout" class="header-link">Logout</a>
-            <a href="/myProfile" class="header-link">My Profile</a>
-            <a href="/logout" class="header-link">Logout</a>
-        </nav>
-    </header>
     <!-- Subheader for "Learning Modules" -->
     <div class="subheader">
         <h2>Learning Modules</h2>
