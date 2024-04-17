@@ -66,8 +66,9 @@ def myProgressPage():
 
 @app.route("/myCommunity")
 def myCommunityPage():
-    user = User.getAll(current_user.id)
-    return render_template("community.html", user=user)
+    # user = User.getAll(current_user.id)
+    # return render_template("community.html", user=user)
+    return render_template("community.html")
 
 @app.route("/myProfile")
 def myProfilePage():
