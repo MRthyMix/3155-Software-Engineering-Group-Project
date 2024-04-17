@@ -65,7 +65,7 @@ class User(UserMixin):
         return user
     
     @staticmethod
-    def getAll(user_id):
+    def getAllAttributesByUserID(user_id):
         """
         Retrieves all user attributes from the database by their ID.
 
