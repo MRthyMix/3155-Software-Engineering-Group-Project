@@ -12,3 +12,25 @@ CREATE TABLE user (
   program TEXT NULL,
   college TEXT NULL
 );
+
+CREATE TABLE Modules(
+  ModuleID TEXT PRIMARY KEY,
+  ModuleName TEXT NOT NULL,
+  active TEXT NOT NULL
+);
+
+CREATE TABLE ModuleItems(
+  ModuleItemID TEXT PRIMARY KEY,
+  ItemName TEXT NOT NULL,
+  active TEXT NOT NULL,
+  ModuleID TEXT NOT NULL,
+  FOREIGN KEY(ModuleID) REFERENCES Modules(ModuleID)
+);
+
+CREATE TABLE UserSelections(
+  id TEXT NOT NULL,
+  ModuleItemID TEXT NOT NULL,
+  FOREIGN KEY(id) REFERENCES user(id),
+  FOREIGN KEY(ModuleItemID) REFERENCES ModuleItems(ModuleItemID),
+  PRIMARY KEY(id, ModuleItemID)
+);
