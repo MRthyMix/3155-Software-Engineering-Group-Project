@@ -35,3 +35,8 @@ CREATE TABLE UserSelections(
   PRIMARY KEY(id, ModuleItemID)
 );
 
+INSERT INTO Modules VALUES ('1', 'Resume Workshop', 'True');
+INSERT INTO Modules VALUES ('2', 'LinkedIn and Social Media', 'True');
+INSERT INTO Modules VALUES ('3', 'Interview Preparation', 'True');
+INSERT INTO Modules VALUES ('4', 'Additional Advice', 'True');
+INSERT INTO Modules VALUES ('5', 'Wrapping It All Up', 'True');
