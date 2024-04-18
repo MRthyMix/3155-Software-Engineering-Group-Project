@@ -20,7 +20,7 @@ section {
 
 /* CSS for Hero Section */
 #hero {
-    background-image: url("{{ url_for('static', filename='images/herostudents.jpeg') }}"); /* Set background image */
+    background-image: url("../images/collegestudents.jpeg"); /* Set background image */
     background-size: cover; /* Cover the entire section with the background image */
     background-position: center; /* Center the background image */
     height: 100vh; /* Set the height of the section to the viewport height */
@@ -42,15 +42,20 @@ section {
 }
 
 .content .textbox h2 {
-    color: black;
+    color: white; /* Change text color to white */
     font-size: 4em;
     line-height: 1.5em;
-    font-weight: 900;
+    font-weight: bold; /* Make text bold */
     margin-bottom: 20px; /* Add some space below the heading */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text */
 }
 
 .content .textbox p {
+    color: white; /* Change text color to white */
+    font-weight: bold; /* Make text bold */
     margin-bottom: 30px; /* Add some space below the paragraph */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Add shadow to text */
+    font-size: 1.2em; /* Adjust font size */
 }
 
 .content .textbox a {

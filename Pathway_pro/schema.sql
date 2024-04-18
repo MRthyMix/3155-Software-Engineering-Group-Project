@@ -34,3 +34,4 @@ CREATE TABLE UserSelections(
   FOREIGN KEY(ModuleItemID) REFERENCES ModuleItems(ModuleItemID),
   PRIMARY KEY(id, ModuleItemID)
 );
+
