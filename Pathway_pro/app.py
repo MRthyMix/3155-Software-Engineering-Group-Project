@@ -19,6 +19,7 @@ import requests
 # Internal imports
 from db import init_db_command
 from user import User
+from modules import Modules
 
 # Configuration
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
@@ -86,7 +87,8 @@ def userDelete():
 @app.route("/userLogin")
 def userLogin():
     if current_user.is_authenticated:
-        return render_template("checklist.html")
+        modules = Modules.getAll()
+        return render_template("checklist.html", modules=modules)
     else:
         return render_template("login_screen.html")
 
