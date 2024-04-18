@@ -12,14 +12,15 @@
         <h2>Learning Modules</h2>
     </div>
 
+    {% for module in modules%}
     <div class="container">
         <!-- First Checklist -->
         <div class="checklist">
             <div class="header">
-                <button onclick="toggleChecklist('checklist1')" class="toggle-button"></button>
-                <h2>Resume Workshop</h2>
+                <button onclick="toggleChecklist('{{module.ModuleID}}')" class="toggle-button"></button>
+                <h2>{{module.ModuleName}}</h2>
             </div>
-            <div class="options" id="checklist1">
+            <div class="options" id="{{module.ModuleID}}">
                 <div class="checklist-item">
                     <label for="item1"><a href="https://edu.gcfglobal.org/en/resumewriting/why-you-need-a-resume/1/" target="_blank" rel="noopener noreferrer">The importance of a strong resume</a></label>
                     <input type="checkbox" id="item1">
@@ -47,10 +48,12 @@
             </div>
         </div>
     </div>
+   {% endfor %}
+    
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <!-- Second Checklist -->
-        <div class="checklist">
+        <!-- <div class="checklist">
             <div class="header">
                 <button onclick="toggleChecklist('checklist2')" class="toggle-button"></button>
                 <h2>LinkedIn and Social Media</h2>
@@ -74,11 +77,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <!-- Third Checklist -->
-        <div class="checklist">
+        <!-- <div class="checklist">
             <div class="header">
                 <button onclick="toggleChecklist('checklist3')" class="toggle-button"></button>
                 <h2>Interview Preparation</h2>
@@ -102,11 +105,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <!-- Fourth Checklist -->
-        <div class="checklist">
+        <!-- <div class="checklist">
             <div class="header">
                 <button onclick="toggleChecklist('checklist6')" class="toggle-button"></button>
                 <h2>Additional Advice</h2>
@@ -126,11 +129,11 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
-    <div class="container">
+    <!-- <div class="container"> -->
         <!-- Fifth Checklist -->
-        <div class="checklist">
+        <!-- <div class="checklist">
             <div class="header">
                 <button onclick="toggleChecklist('checklist7')" class="toggle-button"></button>
                 <h2>Wrapping It All Up</h2>
@@ -158,7 +161,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div> -->
 
     <script src="checklist.js"></script>
 {% endblock %}
