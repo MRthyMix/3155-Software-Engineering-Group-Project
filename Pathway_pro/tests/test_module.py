@@ -6,8 +6,9 @@ import pytest
 
 @pytest.fixture(scope='module')
 def create_module():
-    module = Modules(ModuleID= '6', ModuleName='Module 6', active='True')
-    return module
+    with app.app_context():
+        module = Modules(ModuleID= '6', ModuleName='Module 6', active='True')
+        return module
 
 def test_create_module(create_module):
     with app.app_context():
@@ -38,7 +39,8 @@ def test_get_all_modules():
         modules_in_database = Modules.getAll()
         assert len(modules_in_database) == 5
         for i in range(len(modules_in_database)):
-            assert modules_in_database[i][0] == str(i + 1)
+            assert modules_in_database[i].ModuleID == str(i + 1)
+            # assert modules_in_database[i][0] == str(i + 1)
 
 def test_update_module(create_module):
     with app.app_context():
