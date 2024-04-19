@@ -1,5 +1,5 @@
 from db import get_db
-from moduleItems import ModuleItems
+# from moduleItems import ModuleItems
 
 class Modules():
     """
