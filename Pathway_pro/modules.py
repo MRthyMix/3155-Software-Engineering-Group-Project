@@ -1,4 +1,5 @@
 from db import get_db
+from moduleItems import ModuleItems
 
 class Modules():
     """
@@ -7,7 +8,7 @@ class Modules():
     Attributes:
         ModuleID (str): The ID of the module.
         ModuleName (str): The name of the module.
-        active (bool): Indicates whether the module is active or not.
+        active (str): Indicates whether the module is active or not.
     """
 
     def __init__(self, **kwargs):
@@ -69,7 +70,7 @@ class Modules():
         Args:
             ModuleID (str): The ID of the module.
             ModuleName (str): The name of the module.
-            active (bool): Indicates whether the module is active or not.
+            active (str): Indicates whether the module is active or not.
         """
         db = get_db()
         db.execute(
@@ -87,7 +88,7 @@ class Modules():
         Args:
             ModuleID (str): The ID of the module.
             ModuleName (str): The name of the module.
-            active (bool): Indicates whether the module is active or not.
+            active (str): Indicates whether the module is active or not.
         """
         db = get_db()
         db.execute(
