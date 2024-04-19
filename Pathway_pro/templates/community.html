@@ -6,34 +6,26 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/community.css') }}">
 {% endblock %}
 
-
 {% block body %}
 <section id="community">
     <div class="container">
         <div class="community-header">
-            <h1>Welcome to the Pathway Pro Community!</h1>
+            <h1>Pathway Pro Community!</h1>
             <p>Connect, collaborate, and grow with other users.</p>
         </div>
         
         <div class="community-content">
             <div class="community-info">
                 <h2>Discord</h2>
-                <p>In the Pathway Pro community, you can connect with current students and graduates who are always willing to help each other out, ask questions, and share insights. </p>
-                <div class="community-images">
-                    <div class="community-image">
-                        <img src="{{url_for('static', filename='/images/job.png')}}" alt="dis1">
-                    </div>
-                    <!-- <div class="community-image">
-                        <img src="{{url_for('static', filename='/images/event.png')}}" alt="dis2">
-                    </div> -->
-                    <div class="community-image">
-                        <img src="{{url_for('static', filename='/images/resume.png')}}" alt="dis3">
-                    </div>
-                    <!-- <div class="community-image">
-                        <img src="{{url_for('static', filename='/images/progress.png')}}" alt="dis4">
-                    </div> -->
-                </div>
-                <a href="https://discord.com/invite/cscareers" class="btn" target="_blank">Join Community</a>
+                <p>In the Pathway Pro community, you can connect with current students and graduates who are always willing to help each other out, ask questions, and share insights. 
+                    Here's what our Discord community has to offer.:</p>
+                <ol>
+                    <li><strong>Mock interview:</strong> Prepare for job interviews by simulating real interview scenarios.</li>
+                    <li><strong>Resume review:</strong> Receive personalized feedback on your resume to improve its effectiveness.</li>
+                    <li><strong>Internships/jobs opportunities:</strong> Stay updated on available internships and job openings relevant to your field.</li>
+                    <li><strong>Events:</strong> Participate in various events such as workshops and networking sessions to enhance your skills and expand your professional network.</li>
+                </ol>
+                <a href="https://discord.com/invite/cscareers" class="btn" target="_blank">Join the Discord Community</a>
             </div>
         </div>
     </div>

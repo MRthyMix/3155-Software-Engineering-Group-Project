@@ -7,14 +7,13 @@
 }
 
 .container {
-    max-width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
     padding: 0 15px;
 }
 
-.community-header,
-.community-info {
-    text-align: center;
+.community-header {
+    text-align: left;
     margin-bottom: 30px;
 }
 
@@ -29,6 +28,10 @@
     color: #666;
 }
 
+.community-info {
+    text-align: left;
+}
+
 .community-info h2 {
     font-size: 24px;
     color: #333;
@@ -41,36 +44,24 @@
     margin-bottom: 15px;
 }
 
-.community-images {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Center the items horizontally */
-    gap: 5px; /* Add some gap between the items */
+.community-info ol {
+    margin-left: 20px;
 }
 
-.community-image {
-    width: 500px; /* Set a flexible width */
-    max-width: 500px; /* Set a maximum width for larger screens */
-    text-align: center;
-    margin-bottom: 5px;
-}
-
-.community-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-.community-image p {
+.community-info ol li {
     font-size: 16px;
     color: #666;
-    margin-top: 2px;
+    margin-bottom: 15px;
+}
+
+.community-info strong {
+    color: #5461f7;
 }
 
 .btn {
     display: inline-block;
     padding: 12px 24px;
-    background-color: #5865F2;
+    background-color: #5765F2;
     color: #fff;
     border: none;
     border-radius: 4px;
@@ -78,10 +69,11 @@
     cursor: pointer;
     text-decoration: none;
     transition: background-color 0.3s;
+    margin-bottom: 20px;
 }
 
 .btn:hover {
-    background-color: #4553f0;
+    background-color: #4a58f3;
 }
 
 /* Responsive */
@@ -103,11 +95,7 @@
     }
 
     .community-info p,
-    .community-image p {
+    .community-info ol li {
         font-size: 14px;
-    }
-
-    .community-image {
-        width: 100%;
     }
 }
