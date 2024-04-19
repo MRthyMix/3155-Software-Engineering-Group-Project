@@ -286,15 +286,15 @@ section {
     max-width: 410px; /* Set maximum width for images */
     max-height: 500px; /* Set maximum height for images */
     margin: 10px; /* Add margin around images for spacing */
-    animation: slideRightToLeft 60s linear infinite; /* Animation settings */
+    animation: slideRightToLeft 50s linear infinite; /* Animation settings */
 }
 
 @keyframes slideRightToLeft {
     0% {
-        transform: translateX(650%); /* Initial position: move 100% from right */
+        transform: translateX(615%);
     }
     100% {
-        transform: translateX(-650%); /* Final position: move 100% to the left */
+        transform: translateX(-615%); 
     }
 }
 

@@ -63,7 +63,7 @@ def myLearningPage():
 
 @app.route("/myProgress")
 def myProgressPage():
-    return "My Learning Page"
+    return "My Progress Page"
 
 @app.route("/myCommunity")
 def myCommunityPage():

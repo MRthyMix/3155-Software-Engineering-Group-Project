@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: black;
+    background-color: #060606;
     margin: 0;
     padding: 0;
     display: flex;
@@ -10,11 +10,12 @@ body {
 }
 
 .login-signup-container {
-    width: 350px;
+    width: 380px;
+    height: 200px;
     padding: 20px;
     background-color: white;
     border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 10px rgba(255, 255, 255);
 }
 
 .tabs {
@@ -34,7 +35,7 @@ body {
 }
 
 .tab-btn.active {
-    border-bottom: 2px solid #007bff;
+    border-bottom: 2px solid #fff;
 }
 
 .tab-content {
@@ -94,12 +95,12 @@ input[type="email"]:focus {
 .login-btn {
     width: 100%;
     padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 12px;
+    border: 1px solid #000000;
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
-    background-color: #007bff;
-    color: #fff;
+    background-color: #fff;
+    color: #000;
     cursor: pointer;
     display: flex;
     align-items: center;
