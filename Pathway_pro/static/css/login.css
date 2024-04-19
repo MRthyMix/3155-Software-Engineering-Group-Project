@@ -10,7 +10,8 @@ body {
 }
 
 .login-signup-container {
-    width: 370px;
+    width: 380px;
+    height: 200px;
     padding: 20px;
     background-color: white;
     border-radius: 12px;
@@ -95,7 +96,7 @@ input[type="email"]:focus {
     width: 100%;
     padding: 12px;
     border: 1px solid #000000;
-    border-radius: 12px;
+    border-radius: 8px;
     box-sizing: border-box;
     font-size: 16px;
     background-color: #fff;
