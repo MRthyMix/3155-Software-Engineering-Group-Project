@@ -21,30 +21,32 @@
                 <h2>{{module.ModuleName}}</h2>
             </div>
             <div class="options" id="{{module.ModuleID}}">
+                {% for moduleItem in module.items%}
                 <div class="checklist-item">
-                    <label for="item1"><a href="https://edu.gcfglobal.org/en/resumewriting/why-you-need-a-resume/1/" target="_blank" rel="noopener noreferrer">The importance of a strong resume</a></label>
+                    <label for="item1"><a href="{{moduleItem.itemLink}}" target="_blank" rel="noopener noreferrer">{{moduleItem.ItemName}}</a></label>
                     <input type="checkbox" id="item1">
                 </div>
-                <div class="checklist-item">
+                {% endfor %}
+                <!-- <div class="checklist-item">
                     <label for="item1"><a href="https://www.myperfectresume.com/resume/formats" target="_blank" rel="noopener noreferrer">Common resume templates</a></label>
                     <input type="checkbox" id="item2">
-                </div>
-                <div class="checklist-item">
+                </div> -->
+                <!-- <div class="checklist-item">
                     <label for="item1"><a href="https://www.indeed.com/career-advice/resumes-cover-letters/what-to-include-on-a-resume" target="_blank" rel="noopener noreferrer">What should you include on a resume?</a></label>
                     <input type="checkbox" id="item3">
-                </div>
-                <div class="checklist-item">
+                </div> -->
+                <!-- <div class="checklist-item">
                     <label for="item1"><a href="https://www.topresume.com/career-advice/a-quick-guide-to-education-placement-on-your-resume" target="_blank" rel="noopener noreferrer">How to tailor your educational and work experience</a></label>
                     <input type="checkbox" id="item4">
-                </div>
-                <div class="checklist-item">
+                </div> -->
+                <!-- <div class="checklist-item">
                     <label for="item1"><a href="https://careers.dasa.ncsu.edu/resumes/" target="_blank" rel="noopener noreferrer">Examples of professional resumes</a></label>
                     <input type="checkbox" id="item5">
-                </div>
-                <div class="checklist-item">
+                </div> -->
+                <!-- <div class="checklist-item">
                     <label for="item1"><a href="https://www.indeed.com/create-resume" target="_blank" rel="noopener noreferrer">Create one yourself</a></label>
                     <input type="checkbox" id="item6">
-                </div>
+                </div> -->
             </div>
         </div>
     </div>

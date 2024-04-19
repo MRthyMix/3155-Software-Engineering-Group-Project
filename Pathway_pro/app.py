@@ -88,7 +88,11 @@ def userDelete():
 def userLogin():
     if current_user.is_authenticated:
         modules = Modules.getAll()
+        # for module in modules:
+        #     for item in module.items:
+        #         print(item.ItemName)
         return render_template("checklist.html", modules=modules)
+        # return "Hellos"
     else:
         return render_template("login_screen.html")
 

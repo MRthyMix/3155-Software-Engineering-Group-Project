@@ -1,5 +1,5 @@
 from db import get_db
-# from moduleItems import ModuleItems
+from moduleItem import ModuleItem
 
 class Modules():
     """
@@ -21,6 +21,7 @@ class Modules():
         self.ModuleID = kwargs.get('ModuleID')
         self.ModuleName = kwargs.get('ModuleName')
         self.active = kwargs.get('active')
+        self.items = ModuleItem.getByModuleID(self.ModuleID)
 
     @staticmethod
     def get(module_id):
@@ -59,6 +60,8 @@ class Modules():
         ).fetchall()
         if not modules:
             return None
+        
+        modules = [Modules(ModuleID=module[0], ModuleName=module[1], active=module[2]) for module in modules]
 
         return modules
 
