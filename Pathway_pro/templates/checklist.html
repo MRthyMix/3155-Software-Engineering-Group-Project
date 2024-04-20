@@ -11,50 +11,50 @@
     <div class="subheader">
         <h2>Learning Modules</h2>
     </div>
-
-    {% for module in modules%}
-    <div class="container">
-        <!-- First Checklist -->
-        <div class="checklist">
-            <div class="header">
-                <button onclick="toggleChecklist('{{module.ModuleID}}')" class="toggle-button"></button>
-                <h2>{{module.ModuleName}}</h2>
-            </div>
-            <div class="options" id="{{module.ModuleID}}">
-                {% for moduleItem in module.items%}
-                <div class="checklist-item">
-                    <label for="item1"><a href="{{moduleItem.itemLink}}" target="_blank" rel="noopener noreferrer">{{moduleItem.ItemName}}</a></label>
-                    <input type="checkbox" id="item1">
+    <form action="/saveChecklist" method="POST"> 
+        {% for module in modules%}
+        <div class="container">
+            <!-- First Checklist -->
+            <div class="checklist">
+                <div class="header">
+                    <button onclick="toggleChecklist(event, '{{module.ModuleID}}')" class="toggle-button"></button>
+                    <h2>{{module.ModuleName}}</h2>
                 </div>
-                {% endfor %}
-                <!-- <div class="checklist-item">
-                    <label for="item1"><a href="https://www.myperfectresume.com/resume/formats" target="_blank" rel="noopener noreferrer">Common resume templates</a></label>
-                    <input type="checkbox" id="item2">
-                </div> -->
-                <!-- <div class="checklist-item">
-                    <label for="item1"><a href="https://www.indeed.com/career-advice/resumes-cover-letters/what-to-include-on-a-resume" target="_blank" rel="noopener noreferrer">What should you include on a resume?</a></label>
-                    <input type="checkbox" id="item3">
-                </div> -->
-                <!-- <div class="checklist-item">
-                    <label for="item1"><a href="https://www.topresume.com/career-advice/a-quick-guide-to-education-placement-on-your-resume" target="_blank" rel="noopener noreferrer">How to tailor your educational and work experience</a></label>
-                    <input type="checkbox" id="item4">
-                </div> -->
-                <!-- <div class="checklist-item">
-                    <label for="item1"><a href="https://careers.dasa.ncsu.edu/resumes/" target="_blank" rel="noopener noreferrer">Examples of professional resumes</a></label>
-                    <input type="checkbox" id="item5">
-                </div> -->
-                <!-- <div class="checklist-item">
-                    <label for="item1"><a href="https://www.indeed.com/create-resume" target="_blank" rel="noopener noreferrer">Create one yourself</a></label>
-                    <input type="checkbox" id="item6">
-                </div> -->
+                <div class="options" id="{{module.ModuleID}}">            
+                        {% for moduleItem in module.items%}
+                        <div class="checklist-item">
+                            <label for="item1"><a href="{{moduleItem.itemLink}}" target="_blank" rel="noopener noreferrer">{{moduleItem.ItemName}}</a></label>
+                            <input type="checkbox" id="item1" value="{{moduleItem.ModuleItemID}}" name="moduleItemCheckboxInput">
+                        </div>
+                        {% endfor %}
+                    <!-- <div class="checklist-item">
+                        <label for="item1"><a href="https://www.myperfectresume.com/resume/formats" target="_blank" rel="noopener noreferrer">Common resume templates</a></label>
+                        <input type="checkbox" id="item2">
+                    </div> -->
+                    <!-- <div class="checklist-item">
+                        <label for="item1"><a href="https://www.indeed.com/career-advice/resumes-cover-letters/what-to-include-on-a-resume" target="_blank" rel="noopener noreferrer">What should you include on a resume?</a></label>
+                        <input type="checkbox" id="item3">
+                    </div> -->
+                    <!-- <div class="checklist-item">
+                        <label for="item1"><a href="https://www.topresume.com/career-advice/a-quick-guide-to-education-placement-on-your-resume" target="_blank" rel="noopener noreferrer">How to tailor your educational and work experience</a></label>
+                        <input type="checkbox" id="item4">
+                    </div> -->
+                    <!-- <div class="checklist-item">
+                        <label for="item1"><a href="https://careers.dasa.ncsu.edu/resumes/" target="_blank" rel="noopener noreferrer">Examples of professional resumes</a></label>
+                        <input type="checkbox" id="item5">
+                    </div> -->
+                    <!-- <div class="checklist-item">
+                        <label for="item1"><a href="https://www.indeed.com/create-resume" target="_blank" rel="noopener noreferrer">Create one yourself</a></label>
+                        <input type="checkbox" id="item6">
+                    </div> -->
+                </div>
             </div>
         </div>
-    </div>
-   {% endfor %}
-
-    <div class="container">
-        <button id="saveButton" class="save-button">Save</button>
-    </div>    
+        {% endfor %}
+        <div class="container">
+            <button id="saveButton" class="save-button">Save</button>
+        </div>                
+    </form>
 
     <!-- <div class="container"> -->
         <!-- Second Checklist -->
