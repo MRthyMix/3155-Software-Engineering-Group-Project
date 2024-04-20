@@ -61,6 +61,12 @@ def index():
 def myLearningPage():
     return "My Learning Page"
 
+@app.route("/saveChecklist", methods=['POST'])
+def saveChecklist():
+    checklist = request.form.getlist("moduleItemCheckboxInput")
+    # print(checklist)
+    return checklist
+
 @app.route("/myProgress")
 def myProgressPage():
     return "My Progress Page"
