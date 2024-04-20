@@ -73,7 +73,6 @@ def myCommunityPage():
 
 @app.route("/myProfile")
 def myProfilePage():
-    # current_user.name, current_user.email, current_user.profile_pic
     user = User.getAllAttributesByUserID(current_user.id)
     return render_template("profilePage.html", user=user)
 
@@ -88,11 +87,7 @@ def userDelete():
 def userLogin():
     if current_user.is_authenticated:
         modules = Modules.getAll()
-        # for module in modules:
-        #     for item in module.items:
-        #         print(item.ItemName)
         return render_template("checklist.html", modules=modules)
-        # return "Hellos"
     else:
         return render_template("login_screen.html")
 
@@ -102,45 +97,14 @@ def userUpdate():
     if request.method == 'GET':
         return render_template("update_profile_screen.html", user=user)
     else:
-        if request.form["major"] == "":
-            user.major = ""
-        else:
-            user.major = request.form["major"]
-        
-        if request.form["year"] == "":
-            user.year = ""
-        else:
-            user.year = request.form["year"]
-        
-        if request.form["gpa"] == "":
-            user.gpa = ""
-        else:
-            user.gpa = request.form["gpa"]
-        
-        if request.form["advisor"] == "":
-            user.advisor = ""
-        else:
-            user.advisor = request.form["advisor"]
-        
-        if request.form["Enrollment_Status"] == "":
-            user.Enrollment_Status = ""
-        else:
-            user.Enrollment_Status = request.form["Enrollment_Status"]
-        
-        if request.form["level"] == "":
-            user.level = ""
-        else:
-            user.level = request.form["level"]
-        
-        if request.form["program"] == "":
-            user.program = ""
-        else:
-            user.program = request.form["program"]
-
-        if request.form["college"] == "":
-            user.college = ""
-        else:
-            user.college = request.form["college"]
+        user.major = request.form["major"]
+        user.year = request.form["year"]
+        user.gpa = request.form["gpa"]
+        user.advisor = request.form["advisor"]
+        user.Enrollment_Status = request.form["Enrollment_Status"]
+        user.level = request.form["level"]
+        user.program = request.form["program"]
+        user.college = request.form["college"]            
         
         User.update(current_user.id, user.major, 
                     user.year, 

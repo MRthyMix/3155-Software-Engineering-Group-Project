@@ -27,20 +27,30 @@
             <div class="form-group">
                 <label for="Enrollment_Status">Classification:</label>
                 <select id="classification" name="Enrollment_Status">
-                    <option value="" selected>{{user.Enrollment_Status}}</option>
+                    {% for option in ["Freshman", "Sophomore", "Junior", "Senior"] %}
+                        <option value="{{option}}" {% if user.Enrollment_Status == option %}selected{% endif %}>{{option}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <select id="classification" name="Enrollment_Status">
+                    <option value="{{user.Enrollment_Status}}" selected>{{user.Enrollment_Status}}</option>
                     <option value="Freshman">Freshman</option>
                     <option value="Sophomore">Sophomore</option>
                     <option value="Junior">Junior</option>
                     <option value="Senior">Senior</option>
-                </select>
+                </select> -->
             </div>
             <div class="form-group">
                 <label for="level">Level:</label>
-                <select id="level" name="level" >
-                    <option value="" selected>{{user.level}}</option>
+                <select id="level" name="level">
+                    {% for option in ["Undergraduate", "Graduate"] %}
+                        <option value="{{option}}" {% if user.level == option %}selected{% endif %}>{{option}}</option>
+                    {% endfor %}
+                </select>
+                <!-- <select id="level" name="level" >
+                    <option value="{{user.level}}" selected>{{user.level}}</option>
                     <option value="Undergraduate">Undergraduate</option>
                     <option value="Graduate">Graduate</option>
-                </select>
+                </select> -->
             </div>
             <div class="form-group">
                 <label for="program">Program:</label>
