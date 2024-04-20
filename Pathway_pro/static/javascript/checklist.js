@@ -1,4 +1,6 @@
-function toggleChecklist(checklistId) {
+function toggleChecklist(event, checklistId) {
+    event.preventDefault();
+    
     const options = document.getElementById(checklistId);
     const toggleButton = document.querySelector(`button[onclick="toggleChecklist('${checklistId}')"]`);
     
