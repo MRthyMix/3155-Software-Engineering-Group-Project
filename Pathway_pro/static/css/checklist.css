@@ -137,3 +137,23 @@ nav {
     width: 20px;
     height: 20px;
 }
+
+.save-button {
+    background-color: blue; /* Set the background color to blue */
+    color: white; /* Set the text color to white */
+    border: none;
+    padding: 10px 20px; /* Adjust as needed */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Adjust as needed */
+    margin: 20px 2px;
+    width: 50%;
+    /* height: 40px; */
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.save-button:hover {
+    background-color: darkblue; /* Darken the background color a bit when hovered */
+}
