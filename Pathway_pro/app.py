@@ -53,7 +53,7 @@ client = WebApplicationClient(GOOGLE_CLIENT_ID)
 def load_user(user_id):
     return User.get(user_id)
 
-@app.route("/")
+@app.route("/index.html")
 def index():
     return render_template("home.html")
 
