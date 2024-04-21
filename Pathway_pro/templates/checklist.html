@@ -14,7 +14,6 @@
     <form action="/saveChecklist" method="POST"> 
         {% for module in modules%}
         <div class="container">
-            <!-- First Checklist -->
             <div class="checklist">
                 <div class="header">
                     <button onclick="toggleChecklist(event, '{{module.ModuleID}}')" class="toggle-button"></button>
@@ -27,26 +26,6 @@
                             <input type="checkbox" id="item1" value="{{moduleItem.ModuleItemID}}" name="moduleItemCheckboxInput" {% for selectedItem in userSelections if moduleItem.ModuleItemID == selectedItem.ModuleItemID %}checked {% endfor %}>
                         </div>
                         {% endfor %}
-                    <!-- <div class="checklist-item">
-                        <label for="item1"><a href="https://www.myperfectresume.com/resume/formats" target="_blank" rel="noopener noreferrer">Common resume templates</a></label>
-                        <input type="checkbox" id="item2">
-                    </div> -->
-                    <!-- <div class="checklist-item">
-                        <label for="item1"><a href="https://www.indeed.com/career-advice/resumes-cover-letters/what-to-include-on-a-resume" target="_blank" rel="noopener noreferrer">What should you include on a resume?</a></label>
-                        <input type="checkbox" id="item3">
-                    </div> -->
-                    <!-- <div class="checklist-item">
-                        <label for="item1"><a href="https://www.topresume.com/career-advice/a-quick-guide-to-education-placement-on-your-resume" target="_blank" rel="noopener noreferrer">How to tailor your educational and work experience</a></label>
-                        <input type="checkbox" id="item4">
-                    </div> -->
-                    <!-- <div class="checklist-item">
-                        <label for="item1"><a href="https://careers.dasa.ncsu.edu/resumes/" target="_blank" rel="noopener noreferrer">Examples of professional resumes</a></label>
-                        <input type="checkbox" id="item5">
-                    </div> -->
-                    <!-- <div class="checklist-item">
-                        <label for="item1"><a href="https://www.indeed.com/create-resume" target="_blank" rel="noopener noreferrer">Create one yourself</a></label>
-                        <input type="checkbox" id="item6">
-                    </div> -->
                 </div>
             </div>
         </div>
@@ -55,118 +34,6 @@
             <button id="saveButton" class="save-button">Save</button>
         </div>                
     </form>
-
-    <!-- <div class="container"> -->
-        <!-- Second Checklist -->
-        <!-- <div class="checklist">
-            <div class="header">
-                <button onclick="toggleChecklist('checklist2')" class="toggle-button"></button>
-                <h2>LinkedIn and Social Media</h2>
-            </div>
-            <div class="options" id="checklist2">
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.techtarget.com/whatis/definition/LinkedIn" target="_blank" rel="noopener noreferrer">What is LinkedIn?</a></label>
-                    <input type="checkbox" id="item7">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://blog.hubspot.com/marketing/linkedin-profile-perfection-cheat-sheet" target="_blank" rel="noopener noreferrer">Setting up a professional profile</a></label>
-                    <input type="checkbox" id="item8">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.business.com/articles/linkedin-networking-tips/" target="_blank" rel="noopener noreferrer">How does networking work on LinkedIn?</a></label>
-                    <input type="checkbox" id="item9">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.inlytics.io/guide/linkedin-profile-examples" target="_blank" rel="noopener noreferrer">Examples of appealing LinkedIn profiles</a></label>
-                    <input type="checkbox" id="item10">
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container"> -->
-        <!-- Third Checklist -->
-        <!-- <div class="checklist">
-            <div class="header">
-                <button onclick="toggleChecklist('checklist3')" class="toggle-button"></button>
-                <h2>Interview Preparation</h2>
-            </div>
-            <div class="options" id="checklist3">
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.entrepreneur.com/living/heres-what-to-expect-in-a-job-interview-in-todays-job/457112" target="_blank" rel="noopener noreferrer">What to expect from an interview</a></label>
-                    <input type="checkbox" id="item11">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.themuse.com/advice/star-interview-method" target="_blank" rel="noopener noreferrer">Using the STAR structure to tailor your interview approach</a></label>
-                    <input type="checkbox" id="item12">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.themuse.com/advice/star-interview-method" target="_blank" rel="noopener noreferrer">What do recruiters expect from you?</a></label>
-                    <input type="checkbox" id="item13">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.youtube.com/watch?v=T1vTofBM_uA" target="_blank" rel="noopener noreferrer">Examples of mock interviews</a></label>
-                    <input type="checkbox" id="item14">
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container"> -->
-        <!-- Fourth Checklist -->
-        <!-- <div class="checklist">
-            <div class="header">
-                <button onclick="toggleChecklist('checklist6')" class="toggle-button"></button>
-                <h2>Additional Advice</h2>
-            </div>
-            <div class="options" id="checklist6">
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.coursera.org/articles/how-to-ask-for-a-letter-of-recommendation-template-tips" target="_blank" rel="noopener noreferrer">How to attain reference letters</a></label>
-                    <input type="checkbox" id="item15">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.forbes.com/sites/ashleystahl/2023/06/12/everything-you-need-to-know-about-a-cover-letter-and-why-its-still-important/?sh=48ca5c455665" target="_blank" rel="noopener noreferrer">Are cover letters important?</a></label>
-                    <input type="checkbox" id="item16">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.prospects.ac.uk/careers-advice/applying-for-jobs/what-skills-do-employers-want" target="_blank" rel="noopener noreferrer">Top skills employers want</a></label>
-                    <input type="checkbox" id="item17">
-                </div>
-            </div>
-        </div>
-    </div> -->
-
-    <!-- <div class="container"> -->
-        <!-- Fifth Checklist -->
-        <!-- <div class="checklist">
-            <div class="header">
-                <button onclick="toggleChecklist('checklist7')" class="toggle-button"></button>
-                <h2>Wrapping It All Up</h2>
-            </div>
-            <div class="options" id="checklist7">
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.indeed.com/career-advice/finding-a-job/what-to-do-after-college" target="_blank" rel="noopener noreferrer">What should I do now?</a></label>
-                    <input type="checkbox" id="item18">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.creditkarma.com/income/i/upskilling" target="_blank" rel="noopener noreferrer">Putting newfound skills to work</a></label>
-                    <input type="checkbox" id="item19">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://sapienceanalytics.com/workforce-efficiency-expectations-vs-reality/" target="_blank" rel="noopener noreferrer">Expectations vs reality</a></label>
-                    <input type="checkbox" id="item20">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.vox.com/even-better/23719790/post-graduation-advice-life-work-money" target="_blank" rel="noopener noreferrer">Tips to keep in mind</a></label>
-                    <input type="checkbox" id="item21">
-                </div>
-                <div class="checklist-item">
-                    <label for="item1"><a href="https://www.linkedin.com/pulse/basic-advice-job-seeking-professionals-andrew-beach/" target="_blank" rel="noopener noreferrer">Advice from established professionals</a></label>
-                    <input type="checkbox" id="item22">
-                </div>
-            </div>
-        </div>
-    </div> -->
 
     <script src="checklist.js"></script>
 {% endblock %}
