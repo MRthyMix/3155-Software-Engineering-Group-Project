@@ -6,6 +6,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Noto Sans Lao Looped', sans-serif; /* Used the imported font */
+    scroll-behavior: smooth;
 }
 
 section {
