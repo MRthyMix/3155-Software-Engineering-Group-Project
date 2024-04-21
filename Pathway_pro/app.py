@@ -20,6 +20,7 @@ import requests
 from db import init_db_command
 from user import User
 from modules import Modules
+from userSelections import UserSelections
 
 # Configuration
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
@@ -61,11 +62,14 @@ def index():
 def myLearningPage():
     return "My Learning Page"
 
-@app.route("/saveChecklist", methods=['POST'])
+@app.route("/saveChecklist", methods=['GET','POST'])
 def saveChecklist():
-    checklist = request.form.getlist("moduleItemCheckboxInput")
+    UserSelections.delete(current_user.id)
+    moduleItemIds = request.form.getlist("moduleItemCheckboxInput")
     # print(checklist)
-    return checklist
+    for moduleItemId in moduleItemIds:
+        UserSelections.create(current_user.id, moduleItemId)
+    return redirect(url_for("userLogin"))
 
 @app.route("/myProgress")
 def myProgressPage():
@@ -93,7 +97,10 @@ def userDelete():
 def userLogin():
     if current_user.is_authenticated:
         modules = Modules.getAll()
-        return render_template("checklist.html", modules=modules)
+        userSelctions = UserSelections.getAll(current_user.id)
+        # print(userSelctions.ModuleItemID)
+        # return "Done"
+        return render_template("checklist.html", modules=modules, userSelections=userSelctions)
     else:
         return render_template("login_screen.html")
 

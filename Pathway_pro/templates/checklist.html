@@ -24,7 +24,7 @@
                         {% for moduleItem in module.items%}
                         <div class="checklist-item">
                             <label for="item1"><a href="{{moduleItem.itemLink}}" target="_blank" rel="noopener noreferrer">{{moduleItem.ItemName}}</a></label>
-                            <input type="checkbox" id="item1" value="{{moduleItem.ModuleItemID}}" name="moduleItemCheckboxInput">
+                            <input type="checkbox" id="item1" value="{{moduleItem.ModuleItemID}}" name="moduleItemCheckboxInput" {% for selectedItem in userSelections if moduleItem.ModuleItemID == selectedItem.ModuleItemID %}checked {% endfor %}>
                         </div>
                         {% endfor %}
                     <!-- <div class="checklist-item">
