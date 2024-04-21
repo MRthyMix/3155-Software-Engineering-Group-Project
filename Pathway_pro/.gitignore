@@ -6,3 +6,4 @@ sqlite_db
 venv
 .idea
 .pytest_cache
+.vercel
