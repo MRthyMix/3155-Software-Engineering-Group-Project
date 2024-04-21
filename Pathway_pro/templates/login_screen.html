@@ -1,29 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pathway Pro Login</title>
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/login.css') }}">
-    <link rel="shortcut icon" href="{{ url_for('static', filename='/images/Pathway_pro_icon_white.png') }}">
-</head>
-<body>
-<div class="login-signup-container">
-    <div class="logo-container">
-        <img src="/static/images/Pathway_pro_icon.png" alt="Pathway Pro Logo" class="logo">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Pathway Pro Login</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='/css/login.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename='/images/Pathway_pro_icon_white.png') }}">
+    </head>
+    <body>
+    <div class="login-signup-container">
+        <div class="logo-container">
+            <img src="/static/images/Pathway_pro_icon.png" alt="Pathway Pro Logo" class="logo">
+        </div>
+        <div id="login" class="tab-content active-tab">
+            <h2>Welcome to Pathway Pro</h2>
+            <form action="/login" method="GET">
+                <div class="form-group">
+                    <!-- Modified the button -->
+                    <button type="submit" class="login-btn">
+                        <img src="/static/images/google_color.svg" alt="G Icon" class="google-icon">
+                        <span class="button-text"><strong>Sign in with Google</strong></span>
+                    </button>
+                </div>
+            </form>
+        </div>
     </div>
-    <div id="login" class="tab-content active-tab">
-        <h2>Welcome to Pathway Pro</h2>
-        <form action="/login" method="GET">
-            <div class="form-group">
-                <!-- Modified the button -->
-                <button type="submit" class="login-btn">
-                    <img src="/static/images/google_color.svg" alt="G Icon" class="google-icon">
-                    <span class="button-text"><strong>Sign in with Google</strong></span>
-                </button>
-            </div>
-        </form>
-    </div>
-</div>
-</body>
+    </body>
 </html>
