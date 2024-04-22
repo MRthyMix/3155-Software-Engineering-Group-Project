@@ -75,6 +75,24 @@ def saveChecklist():
 def myProgressPage():
     return "My Progress Page"
 
+@app.route("/myTodoList", methods=['GET','POST'])
+def myTodoListPage():
+    if request.method == 'GET':
+        return render_template("my_todo_list.html")
+    else:
+        return render_template("my_todo_list.html")
+
+@app.route("/updateTodoList", methods=['POST'])
+def updateTodoListPage():
+    id = request.form["taskSelection"]
+    # return render_template("my_todo_list.html")
+    return f"updateEndpoint {id}"
+
+@app.route("/deleteTodoList", methods=['POST'])
+def deleteTodoList():
+    id = request.form["taskSelection"]
+    return f"deleteEndpoint {id}"
+
 @app.route("/myCommunity")
 def myCommunityPage():
     # user = User.getAll(current_user.id)

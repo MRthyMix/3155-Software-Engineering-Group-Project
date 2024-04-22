@@ -1,0 +1,91 @@
+.parent-container {
+    display: block;
+    width: 50%; /* specify a width */
+    margin: auto; /* add auto margins */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin-top: 5em;
+}
+#task-form {
+    margin-bottom: 1em;
+}
+
+#task-input {
+    margin-right: 1em;
+}
+
+#task-table {
+    width: 100%;
+}
+
+#task-table th {
+    text-align: left;
+    padding: 0.5em;
+}
+
+#task-table td {
+    padding: 0.5em;
+}
+
+.save-button {
+    background-color: #007bff; /* Set the background color to blue */
+    color: #fff; /* Set the text color to white */
+    border: none;
+    padding: 10px 20px; /* Adjust as needed */
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px; /* Adjust as needed */
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out; /* Add transition for background color and transform */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+
+.save-button:hover {
+    background-color: #0056b3; /* Darken the background color a bit when hovered */
+    transform: scale(1.1); /* Increase the size of the button when hovered */
+}
+
+.save-button:active {
+    background-color: #003d7a; /* Darken the background color more when clicked */
+    transform: scale(0.9); /* Decrease the size of the button when clicked */
+}
+
+input[type="text"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px; /* Rounded borders */
+    width: 100%; /* Full-width inputs */
+    margin: 5px 0; /* Add some margin */
+    box-sizing: border-box; /* Make sure that padding and width stays inside the border */
+    transition: 0.3s; /* Add transition */
+}
+
+input[type="text"]:focus {
+    border-color: #007bff; /* Change border color on focus */
+    box-shadow: 0 0 8px #007bff; /* Add a shadow on focus */
+}
+
+h2 {
+    text-align: center;
+}
+
+#task-form, #task-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#task-table tbody {
+    border: 1px solid #ccc; /* Add a border */
+    border-collapse: collapse; /* Collapse borders */
+}
+
+#task-table tbody tr {
+    border-bottom: 1px solid #ccc; /* Add a bottom border to each row */
+}
+
+#task-table tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Add a background color to every other row */
+}

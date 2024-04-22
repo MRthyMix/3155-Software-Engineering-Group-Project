@@ -1,0 +1,44 @@
+{% extends "user_home_base.html" %}
+
+{% block head %}
+    <title>My Todo List</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/myTodoList.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="parent-container">
+        <h2>My To-Do List</h2>
+        <form id="task-form" action="/myTodoList" method="POST">
+            <input type="text" id="task-input" placeholder="Enter a new task">
+            <button id="add-task" type="submit" class="save-button">Add Task</button>
+        </form>
+
+        <table id="task-table">
+            <thead>
+                <tr>
+                    <th>Tasks to Complete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Tasks will be added here dynamically -->
+                <tr>
+                    <td>
+                        <label for="task-radio">Task 1</label>
+                        <form action="/updateTodoList" method="POST">
+                            <input type="radio" id="task-radio" name="taskSelection" value="Hello">
+                            <button type="submit" id="update-button">Update</button>
+                        </form>
+                    </td>
+                    <td>
+                        <form action="/deleteTodoList" method="POST">
+                            <input type="hidden" id="task-radio" name="taskSelection" value="Hello">
+                            <!-- <label for="task-radio">Task 1</label> -->
+                            <button type="submit" id="delete-button">Delete</button>
+                    </td>
+                    <td>
+                    </td>
+                </tr>            
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

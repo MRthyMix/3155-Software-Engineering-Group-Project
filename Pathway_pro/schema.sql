@@ -36,6 +36,13 @@ CREATE TABLE UserSelections(
   PRIMARY KEY(id, ModuleItemID)
 );
 
+CREATE TABLE UserTodoList(
+  TaskID TEXT PRIMARY KEY,
+  id TEXT NOT NULL,
+  TaskName TEXT NOT NULL,
+  FOREIGN KEY(id) REFERENCES user(id),
+);
+
 INSERT INTO Modules VALUES ('1', 'Resume Workshop', 'True');
 INSERT INTO Modules VALUES ('2', 'LinkedIn and Social Media', 'True');
 INSERT INTO Modules VALUES ('3', 'Interview Preparation', 'True');
