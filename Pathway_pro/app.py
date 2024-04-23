@@ -21,6 +21,7 @@ from db import init_db_command
 from user import User
 from modules import Modules
 from userSelections import UserSelections
+from userTodoList import UserTodoList
 
 # Configuration
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
@@ -66,7 +67,6 @@ def myLearningPage():
 def saveChecklist():
     UserSelections.delete(current_user.id)
     moduleItemIds = request.form.getlist("moduleItemCheckboxInput")
-    # print(checklist)
     for moduleItemId in moduleItemIds:
         UserSelections.create(current_user.id, moduleItemId)
     return redirect(url_for("userLogin"))
@@ -77,11 +77,18 @@ def myProgressPage():
 
 @app.route("/myTodoList", methods=['GET','POST'])
 def myTodoListPage():
+    tasks = UserTodoList.getById(current_user.id)
     if request.method == 'GET':
-        return render_template("my_todo_list.html")
+        return render_template("my_todo_list.html", tasks=tasks)
     else:
-        return render_template("my_todo_list.html")
-
+        taskName = request.form["taskInput"]
+        if taskName == "":
+            return "No task name provided"
+        # tasks = UserTodoList.getById(current_user.id)
+        UserTodoList.create(current_user.id, taskName)
+        # if tasks is None:
+        #     return "No tasks found"
+        return "Added Task"
 @app.route("/updateTodoList", methods=['POST'])
 def updateTodoListPage():
     id = request.form["taskSelection"]

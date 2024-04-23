@@ -40,7 +40,7 @@ CREATE TABLE UserTodoList(
   TaskID TEXT PRIMARY KEY,
   id TEXT NOT NULL,
   TaskName TEXT NOT NULL,
-  FOREIGN KEY(id) REFERENCES user(id),
+  FOREIGN KEY(id) REFERENCES user(id)
 );
 
 INSERT INTO Modules VALUES ('1', 'Resume Workshop', 'True');

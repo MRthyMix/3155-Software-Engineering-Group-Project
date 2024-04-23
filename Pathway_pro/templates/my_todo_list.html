@@ -9,7 +9,7 @@
     <div class="parent-container">
         <h2>My To-Do List</h2>
         <form id="task-form" action="/myTodoList" method="POST">
-            <input type="text" id="task-input" placeholder="Enter a new task">
+            <input type="text" id="task-input" name="taskInput" placeholder="Enter a new task">
             <button id="add-task" type="submit" class="save-button">Add Task</button>
         </form>
 
@@ -20,25 +20,26 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Tasks will be added here dynamically -->
+                {% if not tasks %}
                 <tr>
-                    <td>
-                        <label for="task-radio">Task 1</label>
-                        <form action="/updateTodoList" method="POST">
-                            <input type="radio" id="task-radio" name="taskSelection" value="Hello">
-                            <button type="submit" id="update-button">Update</button>
-                        </form>
-                    </td>
-                    <td>
-                        <form action="/deleteTodoList" method="POST">
-                            <input type="hidden" id="task-radio" name="taskSelection" value="Hello">
-                            <!-- <label for="task-radio">Task 1</label> -->
-                            <button type="submit" id="delete-button">Delete</button>
-                    </td>
-                    <td>
-                    </td>
-                </tr>            
+                    <td>No tasks to complete</td>
+                </tr>
+                {% else %}
+                <form action="/updateTodoList" method="POST">
+                    {% for task in tasks %}    
+                    <tr>
+                        <td>
+                                <label for="task-radio">{{task.taskName}}</label>
+                                <input type="radio" id="task-radio" name="taskSelection" value="{{task.taskID}}">
+                                <button type="submit" id="update-button">Update</button>
+                                <button type="submit" id="delete-button" formaction="/deleteTodoList">Delete</button>
+                        </td>
+                    </tr>
+                    {% endfor %}         
+                    </form>   
+                {% endif %}
             </tbody>
+                <!-- Tasks will be added here dynamically -->
         </table>
     </div>
 {% endblock %}
