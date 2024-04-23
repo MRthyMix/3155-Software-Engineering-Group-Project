@@ -1,5 +1,5 @@
 from flask import Flask
-from modules import Modules
+from models.modules import Modules
 from db import *
 from app import app
 import pytest

@@ -1,5 +1,5 @@
 from db import get_db
-from moduleItem import ModuleItem
+from models.moduleItem import ModuleItem
 
 class Modules():
     """

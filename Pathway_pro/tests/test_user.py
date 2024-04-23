@@ -1,5 +1,5 @@
 from flask import Flask
-from user import User
+from models.user import User
 from db import *
 from app import app
 import pytest

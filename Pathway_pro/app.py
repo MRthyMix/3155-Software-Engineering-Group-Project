@@ -18,10 +18,10 @@ import requests
 
 # Internal imports
 from db import init_db_command
-from user import User
-from modules import Modules
-from userSelections import UserSelections
-from userTodoList import UserTodoList
+from models.user import User
+from models.modules import Modules
+from models.userSelections import UserSelections
+from models.userTodoList import UserTodoList
 
 # Configuration
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
