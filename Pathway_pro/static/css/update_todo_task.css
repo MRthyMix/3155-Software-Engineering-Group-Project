@@ -1,0 +1,46 @@
+.update-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+    margin-top: 0;
+}
+
+#update-task-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: 10px 10px;
+}
+
+#update-task-input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: 5px 0;
+    box-sizing: border-box;
+}
+
+.update-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.update-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+.update-button:active {
+    background-color: #003d7a;
+    transform: scale(0.9);
+}

@@ -1,0 +1,16 @@
+{% extends "user_home_base.html" %}
+
+{% block head %}
+    <title>Update Todo Task</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/update_todo_task.css') }}">
+{% endblock %}
+
+{% block body %}
+    <div class="update-container">
+        <h2>Update Task</h2>
+        <form id="update-task-form" action="/updateTodoList" method="POST">
+            <input type="text" id="update-task-input" name="taskInput" value="{{task.taskName}}">
+            <button name="TaskID" id="update-task" type="submit" class="update-button" value="{{task.taskID}}">Update Task</button>
+        </form>
+    </div>
+{% endblock %}

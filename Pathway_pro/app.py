@@ -84,21 +84,23 @@ def myTodoListPage():
         taskName = request.form["taskInput"]
         if taskName == "":
             return "No task name provided"
-        # tasks = UserTodoList.getById(current_user.id)
         UserTodoList.create(current_user.id, taskName)
-        # if tasks is None:
-        #     return "No tasks found"
-        return "Added Task"
+        return redirect(url_for("myTodoListPage"))
+
+@app.route("/updateTodoListScreen", methods=['POST'])
+def updateTodoListScreen():
+    task = UserTodoList.getByTaskId(current_user.id, request.form["updateTaskSelection"])
+    return render_template("update_todo_task.html", task=task)
+
 @app.route("/updateTodoList", methods=['POST'])
-def updateTodoListPage():
-    id = request.form["taskSelection"]
-    # return render_template("my_todo_list.html")
-    return f"updateEndpoint {id}"
+def updateTodoList():
+    UserTodoList.update(current_user.id, request.form["TaskID"], request.form["taskInput"])
+    return redirect(url_for("myTodoListPage"))
 
 @app.route("/deleteTodoList", methods=['POST'])
 def deleteTodoList():
-    id = request.form["taskSelection"]
-    return f"deleteEndpoint {id}"
+    UserTodoList.delete(request.form["deleteTaskSelection"], current_user.id)
+    return redirect(url_for("myTodoListPage"))
 
 @app.route("/myCommunity")
 def myCommunityPage():

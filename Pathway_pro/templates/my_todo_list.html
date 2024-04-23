@@ -25,14 +25,14 @@
                     <td>No tasks to complete</td>
                 </tr>
                 {% else %}
-                <form action="/updateTodoList" method="POST">
+                <form action="/updateTodoListScreen" method="POST">
                     {% for task in tasks %}    
                     <tr>
                         <td>
-                                <label for="task-radio">{{task.taskName}}</label>
-                                <input type="radio" id="task-radio" name="taskSelection" value="{{task.taskID}}">
-                                <button type="submit" id="update-button">Update</button>
-                                <button type="submit" id="delete-button" formaction="/deleteTodoList">Delete</button>
+                            <label for="task-radio">{{task.taskName}}</label>
+                            <!-- <input type="radio" id="task-radio" name="taskSelection"> -->
+                            <button  name="updateTaskSelection" type="submit" id="task-radio" value="{{task.taskID}}">Update</button>
+                            <button  name="deleteTaskSelection" type="submit" id="task-radio" formaction="/deleteTodoList" value="{{task.taskID}}">Delete</button>
                         </td>
                     </tr>
                     {% endfor %}         
