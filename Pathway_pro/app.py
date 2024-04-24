@@ -127,7 +127,7 @@ def userLogin():
         userSelctions = UserSelections.getAll(current_user.id)
         # print(userSelctions.ModuleItemID)
         # return "Done"
-        return render_template("checklist.html", modules=modules, userSelections=userSelctions)
+        return render_template("myLearning.html", modules=modules, userSelections=userSelctions)
     else:
         return render_template("login_screen.html")
 
