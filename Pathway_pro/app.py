@@ -59,9 +59,9 @@ def load_user(user_id):
 def index():
     return render_template("home.html")
 
-@app.route("/myLearning")
-def myLearningPage():
-    return "My Learning Page"
+# @app.route("/myLearning")
+# def myLearningPage():
+#     return "My Learning Page"
 
 @app.route("/saveChecklist", methods=['GET','POST'])
 def saveChecklist():
@@ -125,8 +125,6 @@ def userLogin():
     if current_user.is_authenticated:
         modules = Modules.getAll()
         userSelctions = UserSelections.getAll(current_user.id)
-        # print(userSelctions.ModuleItemID)
-        # return "Done"
         return render_template("myLearning.html", modules=modules, userSelections=userSelctions)
     else:
         return render_template("login_screen.html")
