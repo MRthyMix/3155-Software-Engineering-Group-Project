@@ -43,6 +43,17 @@ CREATE TABLE UserTodoList(
   FOREIGN KEY(id) REFERENCES user(id)
 );
 
+CREATE TABLE UserProjects(
+  ProjectID TEXT PRIMARY KEY,
+  id TEXT NOT NULL,
+  ProjectName TEXT NOT NULL,
+  ProjectDescription TEXT NOT NULL,
+  start_date TEXT NOT NULL,
+  end_date TEXT NOT NULL,
+  techStack TEXT NOT NULL,
+  FOREIGN KEY(id) REFERENCES user(id)
+);
+
 INSERT INTO Modules VALUES ('1', 'Resume Workshop', 'True');
 INSERT INTO Modules VALUES ('2', 'LinkedIn and Social Media', 'True');
 INSERT INTO Modules VALUES ('3', 'Interview Preparation', 'True');

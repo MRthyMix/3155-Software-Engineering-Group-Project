@@ -1,0 +1,37 @@
+{% extends "user_home_base.html" %}
+{% block head %}
+    <title>My Projects</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/my_projects.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="projects-container">
+        <h1>My Projects</h1>
+        <form method="POST">
+            {% if not userProjects %}
+                <p>No projects to display</p>
+            {% else %}
+                {% for userProject in userProjects %}
+                <div class="project">
+                    <h2>{{ userProject.projectName }}</h2>
+                    <p>Project Description: {{ userProject.projectDescription }}</p>
+                    <p>Start Time: {{ userProject.startDate }}</p>
+                    <p>End Time: {{ userProject.endDate }}</p>
+                    <p>Tech Stack: {{ userProject.techStack }}</p>
+                    <button type="submit" formaction="/updateProjectScreen" class="update-project-button" name="updateProjectID" value="{{userProject.project_id}}">Update</button>
+                    <button type="submit" formaction="/deleteProject" class="delete-project-button" name="deleteProjectID" value="{{userProject.project_id}}">Completed</button>
+                </div>
+                {% endfor %}
+            {% endif %}
+        </form>
+        
+        <form action="/createProject" method="POST" id="createProject">
+            <input type="text" name="projectTitle" placeholder="Enter your project title">
+            <input type="text" name="projectDescription" placeholder="Enter a description of your project">
+            <input type="datetime-local" name="projectStartTime" placeholder="Enter the start date of your project">
+            <input type="datetime-local" name="projectEndTime" placeholder="Enter the end date of your project">
+            <input type="text" name="projectTechStack" placeholder="Enter the technologies you used for the project">
+            <button type="submit" class="create-project-button">Create New Project</button>    
+        </form>
+        <!-- Add more projects as needed -->
+    </div>
+{% endblock %}

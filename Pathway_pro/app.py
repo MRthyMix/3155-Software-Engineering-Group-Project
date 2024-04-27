@@ -22,6 +22,7 @@ from models.user import User
 from models.modules import Modules
 from models.userSelections import UserSelections
 from models.userTodoList import UserTodoList
+from models.userProjects import Projects
 
 # Configuration
 GOOGLE_CLIENT_ID = os.getenv("GOOGLE_CLIENT_ID")
@@ -74,6 +75,37 @@ def saveChecklist():
 @app.route("/myProgress")
 def myProgressPage():
     return "My Progress Page"
+
+@app.route('/myProjects', methods=['GET'])
+def myProjects():
+    userProjects = Projects.getById(current_user.id)
+    return render_template('my_projects.html', userProjects=userProjects)
+
+@app.route("/createProject", methods=['POST'])
+def createProject():
+    name = request.form['projectTitle']
+    description = request.form['projectDescription']
+    projectStartTime = request.form['projectStartTime']
+    projectEndTime = request.form['projectEndTime']
+    techStack = request.form['projectTechStack']
+    Projects.create(current_user.id, name, description, projectStartTime, projectEndTime, techStack)
+    return redirect(url_for('myProjects'))
+
+@app.route("/updateProjectScreen", methods=['POST'])
+def updateProjectScreen():
+    userProject = Projects.getByProjectID(request.form["updateProjectID"], current_user.id)
+    return render_template("update_projects.html", userProject=userProject)
+
+@app.route("/updateProject", methods=['POST'])
+def updateProject():
+    Projects.update(current_user.id, request.form["projectID"], request.form["projectTitle"], request.form["projectDescription"], request.form["projectStartTime"], request.form["projectEndTime"], request.form["projectTechStack"])
+    return redirect(url_for("myProjects"))
+
+# Route that completes a project (deletes project from database)
+@app.route("/deleteProject", methods=['POST'])
+def deleteProject():
+    Projects.delete(request.form["deleteProjectID"], current_user.id)
+    return redirect(url_for("myProjects"))
 
 @app.route("/myTodoList", methods=['GET','POST'])
 def myTodoListPage():

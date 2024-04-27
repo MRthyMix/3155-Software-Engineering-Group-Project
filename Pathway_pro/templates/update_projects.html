@@ -1,0 +1,18 @@
+{% extends "user_home_base.html" %}
+{% block head %}
+    <title>Update Project</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/update_projects.css') }}">
+{% endblock %}
+{% block body %}
+    <div class="projects-container">
+        <h1>Update Project</h1>
+        <form action="/updateProject" method="POST" id="updateProject">
+            <input type="text" name="projectTitle" placeholder="Enter your project title" value="{{ userProject.projectName }}">
+            <input type="text" name="projectDescription" placeholder="Enter a description of your project" value="{{ userProject.projectDescription }}">
+            <input type="datetime-local" name="projectStartTime" placeholder="Enter the start date of your project" value="{{ userProject.startDate }}">
+            <input type="datetime-local" name="projectEndTime" placeholder="Enter the end date of your project" value="{{ userProject.endDate }}">
+            <input type="text" name="projectTechStack" placeholder="Enter the technologies you used for the project" value="{{ userProject.techStack }}">
+            <button type="submit" class="update-project-button" name="projectID" value="{{ userProject.project_id }}">Update Project</button>    
+        </form>
+    </div>
+{% endblock %}
