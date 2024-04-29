@@ -64,3 +64,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Initialize progress bar
     updateProgressBar();
 });
+
