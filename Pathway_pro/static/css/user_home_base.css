@@ -1,3 +1,18 @@
+/* Add styles for progress bar container */
+#progressBarContainer {
+    background-color: #ddd; /* Background color for the progress bar container */
+    height: 20px; /* Height of the progress bar container */
+    margin-bottom: 20px; /* Spacing below the progress bar container */
+}
+
+/* Add styles for progress bar */
+#progressBar {
+    background-color: #007BFF; /* Color of the progress bar */
+    height: 100%; /* Height of the progress bar */
+    width: 0; /* Initial width of the progress bar */
+    transition: width 0.3s ease-in-out; /* Smooth transition effect for width */
+}
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
