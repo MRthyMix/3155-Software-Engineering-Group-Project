@@ -25,14 +25,16 @@
     background-color: #007BFF;
     color: white;
     border: none;
-    padding: 8px 40px;
+    padding: 8px 20px; /* Adjusted padding */
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     transition: background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
-    border-radius: 10px;
+    border-radius: 5px;
+    width: 120px; /* Fixed width */
 }
+
 
 #add-task:hover {
     background-color: #228afa;

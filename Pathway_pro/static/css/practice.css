@@ -1,0 +1,28 @@
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 5 columns */
+    gap: 20px; /* Adjust the gap between tiles */
+    padding: 20px; /* Add padding to the grid container */
+    justify-content: center; /* Horizontally center the grid */
+    align-items: flex-start; /* Align the grid items to the top */
+}
+
+
+.career-tile {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease-in-out;
+    width: 400px; /* Set a fixed width for each tile */
+    text-align: left; /* Align text to the left */
+    white-space: normal; /* Allow text to wrap */
+}
+
+.career-tile:hover {
+    background-color: #e9e9e9;
+}
+
+.career-tile h3 {
+    margin-top: 0;
+}

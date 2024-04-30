@@ -134,10 +134,12 @@ def deleteTodoList():
     UserTodoList.delete(request.form["deleteTaskSelection"], current_user.id)
     return redirect(url_for("myTodoListPage"))
 
+@app.route("/myPractice")
+def myPracticePage():
+    return render_template("practice.html")
+
 @app.route("/myCommunity")
 def myCommunityPage():
-    # user = User.getAll(current_user.id)
-    # return render_template("community.html", user=user)
     return render_template("community.html")
 
 @app.route("/myProfile")
