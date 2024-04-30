@@ -1,7 +1,7 @@
 {% extends 'user_home_base.html' %}
 
 {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='/css/user_home_base.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/myLearning.css') }}">
     <script src="{{url_for('static', filename='/javascript/checklist.js')}}"></script>
     <title>Checklist</title>
 {% endblock %}
@@ -10,9 +10,10 @@
 
     <!-- Progress bar -->
     <div id="progressBarContainer">
+        <span id="progressLabel">Progress Completed</span>
         <div id="progressBar"></div>
     </div>
-
+    
     <!-- Subheader for "Learning Modules" -->
     <div class="subheader">
         <h2>Learning Modules</h2>
