@@ -1,109 +1,69 @@
-/* body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.profile-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.profile-picture {
-    margin-right: 20px;
-}
-
-.profile-picture img {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-
-.profile-details {
-    text-align: left;
-}
-
-.profile-details h1 {
-    margin-top: 0;
-    margin-bottom: 5px;
-}
-
-.profile-details p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 18px;
-} */
-
 body {
-    font-family: Arial, sans-serif;
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
     margin: 0;
     padding: 0;
+    background-color: #f4f4f4; 
 }
 
 .profile-container {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    height: 100vh;
+    justify-content: center;
+    height: 82vh;
 }
 
 .profile-picture {
-    margin-right: 20px;
+    margin-bottom: 20px; 
 }
 
 .profile-picture img {
     width: 150px;
     height: 150px;
     border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+    transition: transform 0.3s ease-in-out; /* Add hover effect */
+}
+
+.profile-picture img:hover {
+    transform: scale(1.1); /* Enlarge the picture on hover */
 }
 
 .profile-details {
-    text-align: left;
+    text-align: center;
+    margin-bottom: 20px; /* Add margin to separate from buttons */
 }
 
 .profile-details h1 {
-    margin-top: 0;
-    margin-bottom: 5px;
+    margin: 10px 0;
+    color: #333; /* Darken the heading color */
 }
 
 .profile-details p {
-    margin-top: 0;
-    margin-bottom: 5px;
-    font-size: 18px;
-}
-
-/* Additional styles for more information */
-.profile-details p:nth-child(odd) {
-    font-weight: bold;
-}
-
-.profile-details p:last-child {
-    margin-bottom: 0;
-}
-
-.edit-profile-button {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 12px; /* Make the button a little round */
-    background-color: #007bff; /* Add blue color */
-    color: #fff;
-    cursor: pointer;
+    margin: 5px 0;
     font-size: 16px;
-}
-
-.profile-container form {
-    /* margin-top: auto; */
-    justify-content: center;
-    display: inline-flex;
+    color: #666; /* Darken the text color */
 }
 
 .button-container {
     display: flex;
-    justify-content: space-between;
-    width: 20%;
+    justify-content: center; /* Distribute buttons evenly */
+    width: 100%; /* Ensure buttons span the width */
+}
+
+.edit-profile-button {
+    margin: 0 15px; /* Add margin between buttons */
+    padding: 10px 30px;
+    border: none;
+    border-radius: 25px; /* Make the button more rounded */
+    background: linear-gradient(to right, #007bff, #228afa); /* Gradient background */
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Add transition */
+}
+
+.edit-profile-button:hover {
+    transform: scale(1.05); /* Enlarge the button on hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow on hover */
 }
