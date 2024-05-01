@@ -1,0 +1,42 @@
+.subheader {
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    padding: 10px;
+}
+
+.container {
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.sub-container {
+    background-color: #f8f9fa;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+}
+
+.sub-container h3 {
+    color: #6c757d;
+    margin-bottom: 15px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.sub-container ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sub-container ul p {
+    background-color: #e9ecef;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+}

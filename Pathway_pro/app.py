@@ -20,6 +20,7 @@ import requests
 from db import init_db_command
 from models.user import User
 from models.modules import Modules
+from models.moduleItem import ModuleItem
 from models.userSelections import UserSelections
 from models.userTodoList import UserTodoList
 from models.userProjects import Projects
@@ -74,7 +75,12 @@ def saveChecklist():
 
 @app.route("/myProgress")
 def myProgressPage():
-    return "My Progress Page"
+    userSelctions = UserSelections.getAll(current_user.id)
+    userSelectionList = []
+    for userSelction in userSelctions:
+        userSelectionList.append(ModuleItem.get(userSelction[0]).ItemName)
+    userUnselectedList = [ModuleItem.get(str(x)).ItemName for x in range(1, 23) if ModuleItem.get(str(x)).ItemName not in userSelectionList]
+    return render_template('myProgress.html', userSelectionList=userSelectionList, userUnselectedList=userUnselectedList)
 
 @app.route('/myProjects', methods=['GET'])
 def myProjects():

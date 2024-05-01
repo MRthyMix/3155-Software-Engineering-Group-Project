@@ -1,0 +1,30 @@
+{% extends 'user_home_base.html' %}
+
+{% block head %}
+    <link rel="stylesheet" href="{{ url_for('static', filename='/css/myProgress.css') }}">
+    <title>My Progress</title>
+{% endblock %}
+
+{% block body %}
+    <div class="subheader">
+        <h2>My Progress</h2>
+    </div>
+    <div class="container">
+        <div class="sub-container">
+            <h3>Completed Topics</h3>
+            <ul id="completedTopics">
+                {% for userSelection in userSelectionList %}
+                    <p>{{ userSelection }}</p>           
+                {% endfor %}
+            </ul>
+        </div>
+        <div class="sub-container">
+            <h3>Remaining Topics</h3>
+            <ul id="remainingTopics">
+                {% for userNotSelected in userUnselectedList %}
+                    <p>{{ userNotSelected }}</p>           
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+{% endblock %}
