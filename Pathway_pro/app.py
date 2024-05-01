@@ -169,6 +169,8 @@ def userUpdate():
     if request.method == 'GET':
         return render_template("update_profile_screen.html", user=user)
     else:
+        user.name = request.form["name"]
+        user.email = request.form["email"]
         user.major = request.form["major"]
         user.year = request.form["year"]
         user.gpa = request.form["gpa"]
@@ -178,7 +180,7 @@ def userUpdate():
         user.program = request.form["program"]
         user.college = request.form["college"]            
         
-        User.update(current_user.id, user.major, 
+        User.update(current_user.id, user.name, user.email, user.major, 
                     user.year, 
                     user.gpa, 
                     user.advisor, 
