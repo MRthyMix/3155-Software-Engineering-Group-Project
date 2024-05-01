@@ -61,10 +61,6 @@ def load_user(user_id):
 def index():
     return render_template("home.html")
 
-# @app.route("/myLearning")
-# def myLearningPage():
-#     return "My Learning Page"
-
 @app.route("/saveChecklist", methods=['GET','POST'])
 def saveChecklist():
     UserSelections.delete(current_user.id)
