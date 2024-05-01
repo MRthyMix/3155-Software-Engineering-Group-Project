@@ -4,6 +4,7 @@
       <meta charset="UTF-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="shortcut icon" href="{{ url_for('static', filename='/images/Pathway_pro_icon_white.png') }}">
+      <link rel="stylesheet" href="{{ url_for('static', filename='/css/user_home_base.css') }}">
       {% block head %}{% endblock %}
   </head>
   <body>
@@ -11,15 +12,7 @@
       <div>
           {% block body %}{% endblock %}
       </div>
-      <style>
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px 0;
-            text-align: center;
-        }
-      </style>
-    
+          
       <footer>
         <p>Copyright © 2024 Pathway Pro. All rights reserved.</p>
     </footer>
