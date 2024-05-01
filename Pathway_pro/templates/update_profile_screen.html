@@ -1,6 +1,6 @@
 {% extends 'home_base.html' %}
 {% block head %}
-    <title>Signup Page</title>
+    <title>Update Page</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='/css/signup.css') }}">
 {% endblock %}
 
@@ -31,13 +31,6 @@
                         <option value="{{option}}" {% if user.Enrollment_Status == option %}selected{% endif %}>{{option}}</option>
                     {% endfor %}
                 </select>
-                <!-- <select id="classification" name="Enrollment_Status">
-                    <option value="{{user.Enrollment_Status}}" selected>{{user.Enrollment_Status}}</option>
-                    <option value="Freshman">Freshman</option>
-                    <option value="Sophomore">Sophomore</option>
-                    <option value="Junior">Junior</option>
-                    <option value="Senior">Senior</option>
-                </select> -->
             </div>
             <div class="form-group">
                 <label for="level">Level:</label>
@@ -46,11 +39,6 @@
                         <option value="{{option}}" {% if user.level == option %}selected{% endif %}>{{option}}</option>
                     {% endfor %}
                 </select>
-                <!-- <select id="level" name="level" >
-                    <option value="{{user.level}}" selected>{{user.level}}</option>
-                    <option value="Undergraduate">Undergraduate</option>
-                    <option value="Graduate">Graduate</option>
-                </select> -->
             </div>
             <div class="form-group">
                 <label for="program">Program:</label>
