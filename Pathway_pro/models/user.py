@@ -147,12 +147,14 @@ class User(UserMixin):
 
     
     @staticmethod
-    def update(id_, major, year, gpa, advisor, Enrollment_Status, level, program, college):
+    def update(id_, name, email, major, year, gpa, advisor, Enrollment_Status, level, program, college):
         """
         Updates the attributes of a user in the database.
 
         Args:
             id_ (str): The ID of the user.
+            name (str): The name of the user.
+            email (str): The email address of the user.
             major (str): The user's major.
             year (int): The user's academic year.
             gpa (float): The user's GPA.
@@ -164,8 +166,8 @@ class User(UserMixin):
         """
         db = get_db()
         db.execute(
-            "UPDATE user SET major = ?, year = ?, gpa = ?, advisor = ?, Enrollment_Status = ?, level = ?, program = ?, college = ? WHERE id = ?",
-            (major, year, gpa, advisor, Enrollment_Status, level, program, college, id_)
+            "UPDATE user SET name = ?, email = ?, major = ?, year = ?, gpa = ?, advisor = ?, Enrollment_Status = ?, level = ?, program = ?, college = ? WHERE id = ?",
+            (name, email, major, year, gpa, advisor, Enrollment_Status, level, program, college, id_)
         )
         db.commit()
 
