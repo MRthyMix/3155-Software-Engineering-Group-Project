@@ -174,14 +174,14 @@ class User(UserMixin):
     @staticmethod
     def delete(id_):
         """
-        Deletes a user from the database.
+        Deletes a user and their associated data from the database.
 
         Args:
             id_ (str): The ID of the user to delete.
         """
         db = get_db()
-        db.execute(
-            "DELETE FROM user WHERE id = ?",
-            (id_,)
-        )
+        db.execute("DELETE FROM UserSelections WHERE id = ?", (id_,))
+        db.execute("DELETE FROM UserTodoList WHERE id = ?", (id_,))
+        db.execute("DELETE FROM UserProjects WHERE id = ?", (id_,))
+        db.execute("DELETE FROM user WHERE id = ?", (id_,))
         db.commit()
