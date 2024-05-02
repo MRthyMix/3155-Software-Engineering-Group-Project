@@ -31,8 +31,8 @@
                         <td>
                             <label for="task-radio">{{task.taskName}}</label>
                             <!-- <input type="radio" id="task-radio" name="taskSelection"> -->
-                            <button  name="updateTaskSelection" type="submit" id="task-radio" value="{{task.taskID}}">Update</button>
-                            <button  name="deleteTaskSelection" type="submit" id="task-radio" formaction="/deleteTodoList" value="{{task.taskID}}">Delete</button>
+                            <button  name="updateTaskSelection" type="submit" id="task-update" value="{{task.taskID}}">Update</button>
+                            <button  name="deleteTaskSelection" type="submit" id="task-delete" formaction="/deleteTodoList" value="{{task.taskID}}">Delete</button>
                         </td>
                     </tr>
                     {% endfor %}         

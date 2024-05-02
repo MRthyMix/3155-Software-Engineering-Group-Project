@@ -21,7 +21,7 @@
     width: 60%;
 }
 
-#add-task {
+#add-task, #task-update, #task-delete {
     background-color: #007BFF;
     color: white;
     border: none;
@@ -36,7 +36,7 @@
 }
 
 
-#add-task:hover {
+#add-task:hover, #task-update:hover, #task-delete:hover {
     background-color: #228afa;
     transform: scale(1.1);
 }
