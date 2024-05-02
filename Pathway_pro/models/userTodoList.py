@@ -2,6 +2,15 @@ from db import get_db
 import uuid
 
 class UserTodoList:
+    """
+    Represents a user's todo list.
+
+    Attributes:
+        taskID (str): The ID of the task.
+        id (str): The ID of the user.
+        taskName (str): The name of the task.
+    """
+
     def __init__(self, **kwargs):
         self.taskID = kwargs.get('TaskID')
         self.id = kwargs.get('id')
@@ -9,6 +18,13 @@ class UserTodoList:
         
     @staticmethod
     def create(id, taskName):
+        """
+        Creates a new task in the user's todo list.
+
+        Args:
+            id (str): The ID of the user.
+            taskName (str): The name of the task.
+        """
         db = get_db()
         cursor = db.cursor()
         taskID = str(uuid.uuid4())
@@ -20,6 +36,15 @@ class UserTodoList:
     
     @staticmethod
     def getById(id):
+        """
+        Retrieves all tasks for a given user ID.
+
+        Args:
+            id (str): The ID of the user.
+
+        Returns:
+            list: A list of UserTodoList objects representing the tasks.
+        """
         db = get_db()
         userTasks = db.execute(
             "SELECT * FROM UserTodoList WHERE id = ?", (id,)
@@ -31,6 +56,16 @@ class UserTodoList:
     
     @staticmethod
     def getByTaskId(id, TaskID):
+        """
+        Retrieves a task by its ID and user ID.
+
+        Args:
+            id (str): The ID of the user.
+            TaskID (str): The ID of the task.
+
+        Returns:
+            UserTodoList: The UserTodoList object representing the task.
+        """
         db = get_db()
         userTask = db.execute(
             "SELECT * FROM UserTodoList WHERE id = ? AND TaskID = ?", (id, TaskID,)
@@ -42,6 +77,13 @@ class UserTodoList:
     
     @staticmethod
     def delete(TaskID, id):
+        """
+        Deletes a task from the user's todo list.
+
+        Args:
+            TaskID (str): The ID of the task.
+            id (str): The ID of the user.
+        """
         db = get_db()
         cursor = db.cursor()
         cursor.execute(
@@ -51,6 +93,14 @@ class UserTodoList:
 
     @staticmethod
     def update(id, taskID, taskName):
+        """
+        Updates the name of a task in the user's todo list.
+
+        Args:
+            id (str): The ID of the user.
+            taskID (str): The ID of the task.
+            taskName (str): The new name of the task.
+        """
         db = get_db()
         cursor = db.cursor()
         cursor.execute(

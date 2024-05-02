@@ -13,17 +13,25 @@
         <div class="sub-container">
             <h3>Completed Topics</h3>
             <ul id="completedTopics">
-                {% for userSelection in userSelectionList %}
-                    <p>{{ userSelection }}</p>           
-                {% endfor %}
+                {% if userSelectionList %}
+                    {% for userSelection in userSelectionList %}
+                        <p>{{ userSelection }}</p>           
+                    {% endfor %}
+                {% else %}
+                    <p>There are no completed topics.</p>
+                {% endif %}
             </ul>
         </div>
         <div class="sub-container">
             <h3>Remaining Topics</h3>
             <ul id="remainingTopics">
-                {% for userNotSelected in userUnselectedList %}
-                    <p>{{ userNotSelected }}</p>           
-                {% endfor %}
+                {% if userUnselectedList %}
+                    {% for userNotSelected in userUnselectedList %}
+                        <p>{{ userNotSelected }}</p>           
+                    {% endfor %}
+                {% else %}
+                    <p>There are no remaining topics.</p>
+                {% endif %}
             </ul>
         </div>
     </div>

@@ -196,6 +196,7 @@ def userUpdate():
 def get_google_provider_cfg():
     return requests.get(GOOGLE_DISCOVERY_URL).json()
 
+# Workflow for the Google OAuth 2.0 API. Functions include the userLogin, login, callback, and logout.
 @app.route("/login")
 def login():
     # Find out what URL to hit for Google login
